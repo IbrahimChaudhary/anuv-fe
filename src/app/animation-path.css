@@ -1,0 +1,44 @@
+.auto-text path {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: pichkana 7s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 3s);
+}
+img.top-img {
+    position: relative;
+    top: -88px;
+    z-index: -1;
+}
+
+img.bottom-img {
+    position: fixed;
+    top: -89px;
+    right: 0;
+    transition: 1.5s;
+    z-index: -1;
+    pointer-events: none;
+}
+img.bottom-img.active {
+    transform: rotate(3deg);
+    top: 40px;
+}
+
+/* squash & stretch effect */
+@keyframes pichkana {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.111, 0.8); /* stretch horizontally, squash vertically */
+  }
+  50% {
+    transform: scale(1, 1); /* squash horizontally, stretch vertically */
+  }
+  75% {
+    transform: scale(1.1, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+

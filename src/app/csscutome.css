@@ -1,0 +1,641 @@
+.paper1 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.paper1.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+img.recording-img2 {
+    position: absolute;
+    bottom: -32px;
+    left: 40px;
+    width: 310px;
+}
+
+.checkbox-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.paper2.paperclass,
+.paper3.paperclass,
+.paper4.paperclass {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+.paper2.paperclass.show,
+.paper3.paperclass.show,
+.paper4.paperclass.show {
+    top: 0;
+}
+
+.paper3.paperclass .imgpaper {
+    transform: rotate(5deg);
+}
+
+.checkbox-wrap input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Box design */
+.checkbox-wrap input[type=checkbox]+label:before {
+    content: "";
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    background-image: url('/amitimg/checkbox.svg');
+
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Checkmark */
+.checkbox-wrap input[type=checkbox]:checked+label:after {
+    content: "\2713";
+    color: #000000;
+    font-size: 22px;
+    position: absolute;
+    left: 7px;
+    top: 0px;
+}
+
+/* Label styling */
+.checkbox-wrap label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 400;
+    display: flex;
+    letter-spacing: 0.1em;
+    align-items: center;
+}
+
+.content-paper h5 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.content-paper p {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+    margin-left: -30px;
+}
+
+.paperimg {
+    display: flex;
+    position: relative;
+    width: 700px;
+    margin: 45px auto;
+    height: 100vh;
+    align-items: center;
+}
+
+section.formeyou.hide {
+    display: none;
+}
+
+.content-paper {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    padding: 45px 100px 45px 100px;
+}
+
+main.archivemain {
+    position: relative;
+}
+
+.playlistfirstsection {
+    display: flex;
+    align-items: center;
+    padding: 50px 150px;
+    gap: 0px 50px;
+    justify-content: center;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    background-image: url('/amitimg/playlistbg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flexingsitems {
+    max-width: 650px;
+}
+
+.flexingsitems img {
+    max-width: 100%;
+}
+
+.flexcontent ul {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 700;
+    list-style: none;
+}
+
+.flexcontent h4 {
+    font-size: 30px;
+    line-height: 2.2;
+    color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.shaeaericon ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.shaeaericon ul a {
+    width: 22px;
+    display: block;
+}
+
+.shaeaericon {
+    position: relative;
+}
+
+.listsocial {
+    padding: 30px 16px 4px 16px;
+    background-image: url('/amitimg/bgshapesocil.svg');
+
+    background-repeat: no-repeat;
+    background-position: center top 0px;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 35px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0);
+}
+
+.sheareicon:hover .listsocial {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.listsocial ul {
+    margin: 0;
+}
+
+.unionsocial {
+    padding: 30px 15px 5px 15px;
+    background-image: url('/amitimg/musicbg.svg');
+    background-repeat: no-repeat;
+    background-position: center top 0px;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 60px;
+    top: 25px;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.unionclass:hover .unionsocial {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.unionsocial ul {
+    margin: 0;
+}
+
+.textanimationply {
+    animation: float 2s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+    /* 👈 yahi missing tha */
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.notebg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 245px;
+    padding: 30px;
+    height: 70px;
+}
+
+.notebg h5 {
+    font-family: "Caveat", cursive;
+    font-size: 10px;
+    color: #00000087;
+    transform: rotate(3deg);
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.noteshape {
+    margin-top: -25px;
+    position: relative;
+}
+
+.flexcard {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.mainrightcard {
+    width: 55%;
+    gap: 27px;
+    display: flex;
+}
+
+.swiper-pagination {
+    left: 45px !important;
+}
+
+.swiper-pagination span.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 1);
+    width: 20px;
+    height: 20px;
+    margin: 15px 4px !important;
+}
+
+.swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.scontaerd {
+    padding-bottom: 22px;
+    padding-left: 200px;
+    padding-right: 30px;
+    padding-top: 63px;
+}
+.slidercontent.firstcontent {
+    width: 300px;
+}
+img.recording-img2 {
+    position: absolute;
+    bottom: -32px;
+    left: 40px;
+    width: 310px;
+}
+p.caveat {
+    color: #fff;
+    font-family: "Caveat";
+    font-size: 10px;
+    text-align: justify;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: end;
+    line-height: 2;
+}
+.slidercontent p {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+}
+
+.cardimg {
+    width: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+.slidercontent {
+    height: 190px;
+}
+
+.slidercontent.text-right {
+    text-align: right;
+    display: flex;
+    align-items: end;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 28px;
+    color: #fff;
+}
+
+.rightcard.endfg {
+    align-items: end;
+}
+
+.flexcard.tow {
+    align-items: center;
+}
+
+.towimgslider .cardimg {
+    margin-top: 50px;
+}
+
+.flexcard.tow .cardimg {
+    width: 230px;
+}
+
+.sliderarrow {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-button-next {
+    top: 31px !important;
+    left: 59px !important;
+    transform: rotate(0deg);
+}
+
+.swiper-button-prev {
+    top: -70px !important;
+    left: 59px !important;
+    transform: rotate(0deg);
+}
+
+.firstcontent {
+    transform: rotate(2.4deg);
+}
+
+.sliderarrow path {
+    fill: #fff;
+}
+
+.sliderarrow svg.swiper-navigation-icon {
+    width: 16px;
+}
+
+
+section.formeyou {
+    padding: 63px 270px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.imgforyou {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-foryou {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+button.forbutton {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+.textanimationply svg {
+    width: 294px;
+    height: 300px;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes float {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.01);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rooteat {
+    0% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(1.5deg);
+    }
+}
+
+.mainforyou img {
+    animation: rooteat 5s ease-in-out infinite;
+}
+
+.fade-section {
+    opacity: 0;
+    transform: scale(1.4);
+    transition: all 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-section.hidden {
+    opacity: 0;
+    transform: translateY(-40px);
+}
+
+@media screen and (max-width: 1400px) {
+    .flexingsitems {
+        max-width: 590px;
+    }
+
+    .tiltefou svg {
+        width: 260px;
+        height: 100px;
+    }
+
+    .discriptioncontent svg {
+        width: 265px;
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+    .flexingsitems {
+        max-width: 475px;
+    }
+
+    .playlistfirstsection {
+        padding: 50px 50px;
+    }
+
+    .textanimationply svg {
+        width: 190px;
+        height: 160px;
+        box-shadow: none;
+    }
+
+    .shaeaericon ul a {
+        width: 18px;
+        display: block;
+    }
+
+    .listsocial {
+        padding: 25px 16px 4px 16px;
+        left: 10px;
+    }
+
+    .unionsocial {
+        padding: 25px 15px 5px 15px;
+        left: 28px;
+    }
+
+
+    section.formeyou {
+        padding: 63px 155px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tiltefou svg {
+        width: 230px;
+        height: 90px;
+    }
+
+    button.forbutton svg {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section.formeyou {
+        padding: 63px 33px;
+    }
+
+    .playlistfirstsection {
+        padding: 50px 0px;
+        flex-wrap: wrap;
+        gap: 0px;
+        align-items: start;
+    }
+
+    .flexingsitems {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .flexcontent h4 {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .playlistcontent {
+        text-align: justify;
+    }
+
+    .flexcontent ul {
+        font-size: 17px;
+        line-height: 1.5;
+        color: #fff;
+        font-weight: 700;
+        list-style: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section.formeyou {
+        padding: 63px 0px;
+    }
+
+    .paperimg {
+        width: 100%;
+    }
+}

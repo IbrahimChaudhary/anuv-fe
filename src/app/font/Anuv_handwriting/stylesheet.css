@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Anuv_handwriting';
+    src: url('Anuv_handwriting.woff2') format('woff2'),
+        url('Anuv_handwriting.woff') format('woff'),
+        url('Anuv_handwriting.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

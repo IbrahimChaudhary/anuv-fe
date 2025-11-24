@@ -1,0 +1,417 @@
+
+
+@media screen and (max-width: 1600px) {
+    .paycard {
+        max-width: 390px;
+    }
+
+    .textanimationply h3 {
+        font-size: 98px;
+    }
+
+    .contentmusiclist h5 {
+        font-size: 25px;
+    }
+
+    .mainforyou {
+        height: 600px;
+    }
+
+    .tiltefou h2 {
+        font-size: 162px;
+    }
+
+    .discriptioncontent h5 {
+        width: 350px;
+        font-size: 20px;
+    }
+
+
+    .buttonforyou button.forbutton {
+        letter-spacing: 0.2rem;
+        padding: 9px 25px;
+        font-size: 0.8em;
+    }
+
+    .second-section-box {
+        width: 840px;
+        height: 550px;
+    }
+
+    .about-anuv p {
+        font-size: 13px;
+    }
+
+    .about-right-img {
+        max-width: 330px;
+        height: 374px;
+        margin-left: 40px;
+    }
+
+    .about-right-img img {
+        height: 315px;
+    }
+
+    .angal {
+        width: 30px;
+        height: 97px;
+        top: 32px;
+        right: 101px;
+    }
+
+    .rose {
+        width: 180px;
+        bottom: 5px;
+        right: 13px;
+    }
+
+    .paper-clip {
+        top: 30px;
+    }
+
+    .innercontainer {
+        max-width: 1220px;
+    }
+
+    .small-card-content {
+        width: 376px;
+        top: 290px;
+    }
+
+    section.mains-music-bg:before {
+        background-size: 100%;
+        width: 100%;
+        height: 110px;
+    }
+
+    .silde-dote-row {
+        width: 490px;
+        padding: 15px;
+    }
+
+    .prev,
+    .next {
+        width: 40px;
+    }
+
+    .watch-button {
+        padding: 9px 15px 10px;
+    }
+
+    img.gig-bg {
+        height: 121%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .paycard {
+        max-width: 350px;
+    }
+
+    .checkbox-wrap label {
+        font-size: 13px;
+    }
+
+    .content-paper h5 {
+        font-size: 18px;
+    }
+
+    .paperimg {
+        width: 625px;
+    }
+
+    .checkbox-wrap input[type="checkbox"]+label:before {
+        background-size: 20px;
+        width: 20px;
+        height: 25px;
+    }
+
+    .checkbox-wrap input[type="checkbox"]:checked+label:after {
+        font-size: 22px;
+        top: -4px;
+        left: 3px;
+    }
+
+    .mainforyou {
+        height: 484px;
+    }
+
+    .tiltefou svg {
+        width: 260px;
+        height: 100px;
+    }
+
+    .discriptioncontent svg {
+        width: 265px;
+    }
+
+    .tiltefou h2 span {
+        margin-left: 57px;
+    }
+
+    .tiltefou h2 {
+        letter-spacing: -41px;
+        width: 282px;
+        font-size: 122px;
+
+    }
+
+    .discriptioncontent h5 {
+        max-width: 353px;
+        font-size: 20px;
+    }
+
+    .buttonforyou button.forbutton {
+        padding: 7px 25px;
+        letter-spacing: 0.2em;
+    }
+
+    .textanimationply h3 {
+        font-size: 90px;
+    }
+
+    .contentmusiclist h5 {
+        font-size: 24px;
+    }
+
+
+}
+
+@media screen and (max-width: 1250px) {
+
+    .paycard {
+        max-width: 280px;
+        border: 15px solid #fff;
+        border-bottom-width: 70px;
+
+    }
+
+    .fleging {
+        padding: 50px 0px;
+    }
+
+    .textanimationply svg {
+        width: 190px;
+        height: 160px;
+        box-shadow: none;
+    }
+
+    .shaeaericon ul a {
+        width: 18px;
+        display: block;
+    }
+
+    .listsocial {
+        padding: 25px 16px 4px 16px;
+        left: 10px;
+    }
+
+    .unionsocial {
+        padding: 25px 15px 5px 15px;
+        left: 28px;
+    }
+
+
+    section.formeyou {
+        padding: 0px 50px;
+    }
+
+    .mainforyou {
+        height: 410px;
+    }
+
+    .tiltefou h2 {
+        letter-spacing: -41px;
+        width: 250px;
+        font-size: 108px;
+    }
+
+    .discriptioncontent h5 {
+        max-width: 265px;
+        font-size: 15px;
+    }
+
+    .buttonforyou button.forbutton {
+        letter-spacing: .2em;
+        padding: 7px 15px;
+        font-size: 0.7em;
+    }
+
+    .paperimg {
+        width: 570px;
+    }
+ 
+    .content-paper h5 {
+        font-size: 15px;
+    }
+
+    .checkbox-wrap label {
+        font-size: 12px;
+    }
+
+
+    .checkbox-wrap input[type="checkbox"]+label:before {
+        background-size: 19px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .checkbox-wrap input[type="checkbox"]:checked+label:after {
+
+        font-size: 22px;
+        top: -7px;
+        left: 2px;
+    }
+
+
+}
+
+@media screen and (max-width: 1100px) {
+    .content-paper {
+        padding: 45px 70px;
+    }
+
+    .paperimg {
+        width: 485px;
+    }
+
+    .checkbox-wrap label {
+        font-size: 10px;
+    }
+
+    .content-paper h5 {
+        font-size: 13px;
+    }
+
+    .mainforyou {
+        height: 355px;
+    }
+
+    .tiltefou h2 {
+        letter-spacing: -35px;
+        width: 250px;
+        font-size: 99px;
+        left: -30px;
+        line-height: 0.4;
+    }
+
+    .discriptioncontent h5 {
+        max-width: 210px;
+        font-size: 12px;
+    }
+
+    .buttonforyou button.forbutton {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tiltefou svg {
+        width: 230px;
+        height: 90px;
+    }
+
+    button.forbutton svg {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section.formeyou {
+        padding: 50px 0px;
+    }
+
+    .textanimationply h3 {
+        font-size: 70px;
+    }
+
+    .contentmusiclist h5 {
+        font-size: 18px;
+    }
+
+    .playlistfirstsection {
+        height: auto;
+        position: relative;
+    }
+
+    .fleging {
+        padding: 65px 20px;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .paycard {
+        max-width: 100%;
+        width: 60%;
+    }
+
+    .flexingsitems {
+        width: 100%;
+    }
+
+    .flexcontent h4 {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .playlistcontent {
+        text-align: justify;
+    }
+
+    .flexcontent ul {
+        font-size: 17px;
+        line-height: 1.5;
+        color: #fff;
+        font-weight: 700;
+        list-style: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section.formeyou {
+        padding: 0px 20px;
+    }
+
+    .contentmusiclist h5 {
+        font-size: 15px;
+    }
+
+    .textanimationply h3 {
+        font-size: 65px;
+    }
+
+    .contentmusiclist {
+        margin-top: 25px;
+    }
+
+    .paycard {
+        background-color: #fff;
+        border: 10px solid #fff;
+        border-bottom-width: 70px;
+        width: 100%;
+        max-width: 100%
+    }
+
+    .paperimg {
+        width: 100%;
+    }
+
+
+.navbar {
+        transform-origin: 100%;
+        z-index: 9999;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        position: fixed;
+        top: 89%;
+        right: -31px;
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+
+
+
+}

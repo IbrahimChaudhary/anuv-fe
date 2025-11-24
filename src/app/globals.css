@@ -1,13 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
-* { margin: 0; padding: 0; }
-main {  overflow: hidden; }
-body {  background: #333;}
+body {
+    overflow-x: hidden !important;
+    background: #1a1a1a;
+}
 
 html,
 body {
     overflow: visible;
     scroll-behavior: auto;
-    /* font-family: "Bodoni Moda", serif; */
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -71,9 +75,9 @@ body {
 
 }
 
-.auto-text svg {
+/* .auto-text h1 {
     animation: floatText 3s ease-in-out infinite;
-}
+} */
 
 @keyframes scalanimation {
     0% {
@@ -318,18 +322,51 @@ button.prev img {
     background-attachment: fixed;
     background-size: cover;
 }
+
 .discriptioncontent img {
     width: 370px;
 }
+
 .tiltefou img {
     width: 405px;
 }
 
+.tiltefou h2 span {
+    margin-left: 72px;
+    animation: pichkana 12s infinite;
+}
 
 .main-banner {
     width: 100%;
-    z-index: 99;
+    z-index: 9999;
     position: relative;
+    overflow: hidden;
+}
+
+.discriptioncontent {
+    margin-bottom: 24px;
+}
+
+.buttonforyou button.forbutton {
+    cursor: pointer;
+    background-color: #0000;
+    border: none;
+    color: #00000099;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0;
+    padding: 10px 25px 10px;
+    font-family: '__nextjs-Geist Mono';
+    font-size: 1.3em;
+    text-decoration: none;
+    transition: all 1s;
+    display: flex;
+    box-shadow: inset 0 0 #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
 }
 
 img {
@@ -337,13 +374,16 @@ img {
 }
 
 .scribble-line {
+    background-image: url(/images/bg-line.svg);
+    background-repeat: no-repeat;
     background-size: cover;
     width: 420px;
-    position: absolute;
     height: 100px;
-    background-image: url('/images/bg-line.svg'); 
-    top: 20%;
-    background-repeat: no-repeat;
+    position: absolute;
+    top: 10%;
+    background-position: center;
+    z-index: 999;
+    left: -29px;
 }
 
 .auto-text {
@@ -353,17 +393,16 @@ img {
     text-align: center;
     align-items: center;
     display: flex;
-    font-size: 76px;
     color: #fffaee;
 }
 
 .rose {
-    position: absolute;
     z-index: 9;
-    top: 353px;
-    right: 0;
     pointer-events: none;
-    width: 200px;
+    width: 237px;
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
 }
 
 img.text {
@@ -384,21 +423,24 @@ img.text {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 9;
-    margin-top: -221px;
+    z-index: 999;
+    margin-top: -340px;
     background-position: bottom center;
 }
 
+section {
+    z-index: 99;
+}
+
 .second-section-box {
-    width: 725px;
-    margin: 0 auto;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px;
-    display: flex;
+    background-size: cover;
     align-items: center;
-    margin-top: 90px;
+    width: 1025px;
+    height: 658px;
+    margin: 90px auto 0;
+    display: flex;
     position: relative;
 }
 
@@ -408,7 +450,9 @@ img.text {
 
 .about-anuv {
     width: 40%;
-    padding-left: 47px;
+    padding-left: 75px;
+    transform: rotate(3deg);
+    padding-top: 80px;
 }
 
 .about-anuv img {
@@ -416,13 +460,21 @@ img.text {
 }
 
 .about-anuv p {
+    color: #4a4747;
     margin-bottom: 15px;
-    color: #827a7a;
+    font-family: IBM Plex Mono;
+    font-size: 17px;
 }
 
 .footer {
     background-color: #1A1A1A;
-    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #0a0909;
+}
+
+.footer .footerinner {
+    background-color: #1A1A1A;
+    padding: 90px 20px;
     text-align: center;
 }
 
@@ -444,7 +496,7 @@ img.text {
     outline: none;
     background: #1A1A1A;
     color: #fff;
-    width: 250px;
+    width: 350px;
 }
 
 .newsletter button {
@@ -455,10 +507,11 @@ img.text {
     cursor: pointer;
     font-weight: 500;
     font-size: 21px;
+    font-family: '__nextjs-Geist Mono';
 }
 
 .social-icons {
-    margin-top: 30px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -466,74 +519,101 @@ img.text {
 }
 
 .social-icons a img {
-    width: 30px;
+    width: 40px;
 }
 
 ul.dates-list li {
-    color: #827a7a;
+    color: #131212;
+    margin-bottom: 6px;
+    font-family: IBM Plex Mono;
+    font-size: 18px;
+    letter-spacing: -0.03em;
 }
 
 .polaroid-group-row {
-    display: flex;
-    align-items: center;
     justify-content: space-around;
-    position: relative;
-    left: 30px;
+    align-items: center;
     gap: 13px;
-    top: -385px;
+    display: flex;
+    position: relative;
+    top: -470px;
+    left: -30px;
 }
 
 .angal {
-    width: 28px;
-    height: 98px;
-    position: absolute;
-    top: 37px;
-    right: 70px;
     z-index: 9;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    width: 34px;
+    height: 117px;
+    position: absolute;
+    top: 32px;
+    right: 142px;
 }
 
 .afsos {
-    width: 33%;
+    width: 55%;
+    height: 100%;
     margin-left: auto;
     position: relative;
-    right: 20%;
     top: 15%;
-    height: 100%;
+    right: 0;
 }
 
 .afsos svg {
     width: 250px;
 }
 
-
-.nav-arrows {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 15px;
+.afsos h4 {
+    color: #ffffff;
+    font-family: 'Anuv_handwriting';
+    font-size: 107px;
+    font-weight: 500;
+    letter-spacing: -30px;
+    line-height: 1;
+    margin-left: -30px;
 }
 
-.scribble-line {
-    width: 22%;
-    position: relative;
-    left: 0;
-    top: 219px;
+.afsos h4 span {
+    margin-left: 30px;
+}
+
+.nav-arrows {
+    justify-content: space-between;
+    width: 210px;
+    padding-left: 15px;
+    display: flex;
+    margin: 0 auto;
 }
 
 .scribble-line.left {
-    top: 569px;
     margin-left: auto;
-    left: 122px;
+    right: -120px;
+    bottom: 35%;
+    top: auto;
+}
+
+.main-flexsf {
+    position: relative;
 }
 
 .small-card-content {
-    width: 300px;
+    width: 490px;
     position: relative;
-    top: 360px;
-    left: 23%;
+    top: 300px;
+    left: 34px;
+}
+
+.footer-logo h4 {
+    color: #fff;
+    letter-spacing: -2.9rem;
+    font-family: Anuv_handwriting;
+    font-size: 141px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 0.5;
+    animation: pichkana 12s infinite;
 }
 
 .papers-fles {
@@ -543,31 +623,33 @@ ul.dates-list li {
 }
 
 .large-note-paper {
+    width: 670px;
     position: absolute;
-    top: 12%;
-    right: 15%;
-    width: 490px;
+    top: 10px;
+    right: 0;
+    height: 580px;
 }
 
 .about-right-img {
-    position: relative;
-    overflow: hidden;
+    background-color: #fff;
     width: 100%;
-    max-width: 273px;
-    background-color: #ffffff;
-    height: 310px;
-    margin-left: 64px;
-    transform: rotate(9deg);
-    top: -25px;
+    max-width: 390px;
+    height: 460px;
+    margin-left: 74px;
+    position: relative;
+    top: -20px;
+    overflow: hidden;
+    transform: rotate(7deg);
+    box-shadow: 4px 4px 6px #3d3d3d;
 }
 
 .about-right-img img {
     object-fit: cover;
     width: 90%;
+    height: 375px;
+    padding: 5%;
     position: absolute;
     inset: 0%;
-    padding: 5%;
-    height: 245px;
 }
 
 .polaroid-group {
@@ -577,17 +659,18 @@ ul.dates-list li {
 }
 
 .polaroid-frame {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 230px;
-    background-color: #060606;
-    height: 230px;
-    left: -144px;
-    top: 115px;
-    transform: rotate(353deg);
-    border: 10px solid #ffffff;
     z-index: 9;
+    background-color: #060606;
+    border: 10px solid #fff;
+    width: 100%;
+    max-width: 48%;
+    height: 42%;
+    position: relative;
+    top: 120px;
+    left: -144px;
+    overflow: hidden;
+    transform: rotate(353deg);
+    box-shadow: 0 0 4px #000;
 }
 
 .polaroid-image {
@@ -612,39 +695,44 @@ ul.dates-list li {
 }
 
 .positionrelative {
-    position: relative;
+    position: relative; 
 }
 
 .blue-tape {
+    z-index: 99;
+    width: 348px;
     position: absolute;
-    top: 68px;
+    top: 60px;
     left: -104px;
     right: auto;
-    z-index: 99;
-    width: 232px;
 }
 
 .shapesret {
-    width: 215px;
-    position: relative;
     z-index: 9;
-    top: 158px;
-    left: 83px;
+    width: 280px;
+    position: relative;
+    top: 157px;
+    left: 153px;
 }
 
 .dates-list {
     list-style: none;
     padding: 10px 0;
-    font-size: 16px;
     line-height: 2.2;
     color: #333;
 }
 
 .footer-widgets {
-    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 40px;
+    margin-top: 20px;
+    display: flex;
+
+    position: absolute;
+    bottom: -34px;
+    left: 0;
+    right: 0;
+    padding-left: 100px;
 }
 
 .nav-arrows span {
@@ -664,19 +752,20 @@ ul.dates-list li {
 }
 
 .paper-clip {
-    width: 25px;
+    width: 41px;
     position: absolute;
-    left: 420px;
     top: 19px;
+    right: 70px;
+    z-index: 9;
 }
 
 .music-section {
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 .stamp-image {
@@ -685,7 +774,7 @@ ul.dates-list li {
     z-index: 0;
 }
 
-.stamp-image::after {
+/* .stamp-image::after {
     content: "";
     position: absolute;
     top: 83px;
@@ -694,16 +783,26 @@ ul.dates-list li {
     height: 67%;
     background-color: black;
     z-index: -3;
-}
+} */
 
 .stamp-container {
+    margin-top: 200px;
     display: inline-block;
-    margin-top: 150px;
+    padding-bottom: 0px;
 }
 
-.stamp-image {
-    width: 500px;
+.stamp-container h4 {
+    color: #FFFFFF;
+    font-family: 'Anuv_handwriting';
+    font-size: 137px;
+    font-weight: 100;
+    letter-spacing: -45px;
+    line-height: 0.7;
 }
+
+/* .stamp-image {
+    width: 500px;
+} */
 
 .stamp-image img {
     width: 100%;
@@ -723,8 +822,7 @@ ul.dates-list li {
     border: 2px solid white;
     color: white;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 1.3em;
     letter-spacing: 1px;
     transition: 1s;
     justify-content: center;
@@ -735,21 +833,21 @@ ul.dates-list li {
     width: 160px;
     margin: 20px auto 0;
     box-shadow: inset 0 0 0 0 #fff;
+    font-family: '__nextjs-Geist Mono';
 }
 
 
 .stam img {
-    width: 60px;
-    position: absolute;
-    right: 0;
-    left: 292px;
-    top: 361px;
+    width: 80px;
 }
 
 .circle-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 89px;
+    bottom: 61px;
 }
 
 .rotating-circle {
@@ -776,7 +874,7 @@ ul.dates-list li {
 
 .chain-wrap {
     position: relative;
-    width: var(--w);
+    /* width: var(--w); */
     border-radius: 16px;
     overflow: visible;
 }
@@ -800,7 +898,7 @@ ul.dates-list li {
 }
 
 .moving-chain {
-    animation: moveChain 8.8s linear infinite, pulse 0.8s ease-in-out infinite;
+    animation: moveChain 15.8s linear infinite, pulse 0.8s ease-in-out infinite;
 }
 
 @keyframes moveChain {
@@ -835,7 +933,7 @@ ul.dates-list li {
 }
 
 .silde-dote-row {
-    width: 470px;
+    width: 690px;
     background-color: #fffaee;
     margin: 0 auto;
     position: relative;
@@ -858,33 +956,31 @@ section.mains-music-bg::before {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100px;
+    height: 133px;
     position: absolute;
     top: 0;
     z-index: 0;
 }
 
-/*=====================third-section ===================*/  
+/*=====================third-section ===================*/
 .third-section {
     position: relative;
 }
 
 img.gig-bg {
+    width: 102%;
+    height: 117.2%;
     position: absolute;
-    inset: 0;
-    width: 105%;
-    height: 350vh;
-    top: -774px;
-    bottom: 0;
-    left: -2%;
+    inset: -154px 0 0 -37px;
 }
 
 img.rotateanimation3.gig-bg.bottoms {
     z-index: -2;
-    height: 103vh;
+    height: 100%;
     top: 0;
 }
-/*======================== footer CSS ===================*/ 
+
+/*======================== footer CSS ===================*/
 .social-icons a {
     position: relative;
     display: inline-block;
@@ -943,26 +1039,38 @@ img.rotateanimation3.gig-bg.bottoms {
 
 /*======================== animetion css ===================*/
 
-.auto-text path {
+.auto-text h1 {
     transform-box: fill-box;
     transform-origin: 50% 50%;
-    animation: pichkana 7s ease-in-out infinite;
+    animation: pichkana 12s infinite;
     animation-delay: calc(var(--i) * 3s);
+    font-family: 'Anuv_handwriting';
+    font-weight: 100;
+    font-size: 210.3px;
+    letter-spacing: -60px;
+}
+
+.footer-logo h4 span {
+    margin-left: 1.6rem;
+}
+
+.auto-text h1 span {
+    margin-left: 60px;
 }
 
 img.top-img {
     position: relative;
-    top: -88px;
+    top: -165px;
     z-index: -1;
 }
 
 img.bottom-img {
-    position: fixed;
-    top: -89px;
-    right: 0;
-    transition: 1.5s;
     z-index: -1;
     pointer-events: none;
+    transition: all 1.5s;
+    position: fixed;
+    top: -166px;
+    right: 0;
 }
 
 img.bottom-img.active {
@@ -970,6 +1078,29 @@ img.bottom-img.active {
     top: 40px;
 }
 
+.redstrp {
+    animation: roserotate 2s infinite;
+}
+
+.blackstrp {
+    animation: roserotateback 2s infinite;
+}
+
+.large-note-paper.slide2 {
+    transition: 1s all ease;
+}
+
+.large-note-paper.slide2.active {
+    top: 90%;
+    right: -150%;
+    transform: rotate(-13deg);
+}
+
+img.nextslide.disab,
+img.prevslide.disab {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
 
 
 @keyframes pichkana {
@@ -978,7 +1109,7 @@ img.bottom-img.active {
     }
 
     25% {
-        transform: scale(1.111, 0.8);
+        transform: scale(1, 0.9);
     }
 
     50% {
@@ -986,7 +1117,7 @@ img.bottom-img.active {
     }
 
     75% {
-        transform: scale(1.1, 0.8);
+        transform: scale(1, 0.9);
     }
 
     100% {
@@ -994,9 +1125,53 @@ img.bottom-img.active {
     }
 }
 
+@keyframes roserotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(0.5deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+
+    75% {
+        transform: rotate(1.5deg);
+    }
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes roserotateback {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-0.5deg);
+    }
+
+    50% {
+        transform: rotate(-1deg);
+    }
+
+    75% {
+        transform: rotate(-1.5deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
 /*================custom css======================*/
 
-.paper1 {
+/* .paper1 {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.6s ease;
@@ -1006,7 +1181,7 @@ img.bottom-img.active {
     display: block;
     opacity: 1;
     visibility: visible;
-}
+} */
 
 .checkbox-wrap {
     position: relative;
@@ -1016,6 +1191,7 @@ img.bottom-img.active {
 
 }
 
+.paper1.paperclass,
 .paper2.paperclass,
 .paper3.paperclass,
 .paper4.paperclass {
@@ -1024,8 +1200,12 @@ img.bottom-img.active {
     left: 0;
     right: 0;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
+    bottom: 0;
 }
 
+.paper1.paperclass.show,
 .paper2.paperclass.show,
 .paper3.paperclass.show,
 .paper4.paperclass.show {
@@ -1051,26 +1231,28 @@ img.bottom-img.active {
     top: 1px;
     margin-right: 10px;
     box-sizing: border-box;
-        background-image: url('/images/checkbox.svg'); 
+    background-image: url('/images/checkbox.svg');
     background-size: 25px;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .checkbox-wrap input[type=checkbox]:checked+label:after {
-    content: "\2713";
-    color: #000000;
-    font-size: 22px;
+    content: "✓";
+    color: #000;
+    font-size: 30px;
     position: absolute;
-    left: 7px;
-    top: 0px;
+    top: -9px;
+    left: 8px;
+    font-weight: 100;
+    font-family: cursive;
 }
 
 .checkbox-wrap label {
     position: relative;
     cursor: pointer;
     user-select: none;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "IBM Plex Mono";
     font-size: 15px;
     color: #000000;
     font-weight: 400;
@@ -1079,23 +1261,38 @@ img.bottom-img.active {
     align-items: center;
 }
 
+.wrapper.first {
+    padding: 0px 20px;
+}
+
 .content-paper h5 {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "IBM Plex Mono";
     font-size: 20px;
     color: #000000;
     font-weight: 400;
     letter-spacing: 0.1em;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.about-anuv h3 {
+    color: #000;
+    letter-spacing: -15px;
+    font-family: Anuv_handwriting;
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 1.5;
+    animation: pichkana 12s infinite;
 }
 
 .content-paper p {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: "IBM Plex Mono";
     font-size: 20px;
     color: #000000;
     font-weight: 400;
     margin-bottom: 20px;
     letter-spacing: 0.1em;
     margin-left: -30px;
+    display: none;
 }
 
 .paperimg {
@@ -1103,7 +1300,7 @@ img.bottom-img.active {
     position: relative;
     width: 700px;
     margin: 45px auto;
-    height: 100vh;
+    height: 100%;
     align-items: center;
 }
 
@@ -1113,7 +1310,6 @@ section.formeyou.hide {
 
 .content-paper {
     position: absolute;
-    top: 20%;
     left: 0;
     right: 0;
     padding: 45px 100px 45px 100px;
@@ -1124,26 +1320,39 @@ main.archivemain {
 }
 
 .playlistfirstsection {
-    display: flex;
-    align-items: center;
-    padding: 50px 150px;
-    gap: 0px 50px;
-    justify-content: center;
     position: sticky;
     height: 100vh;
-    top: 0; 
-     background-image: url('/images/playlistbg.svg'); 
+    top: 0;
+    background-image: url('/images/playlistbg.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.flexingsitems {
-    max-width: 650px;
+.fleging {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.paycard {
+    max-width: 500px;
+    background-color: #ffffff;
+    border: 20px solid #fff;
+    border-bottom-width: 100px;
+    transform: skew(0deg, -1.5deg);
 }
 
 .flexingsitems img {
     max-width: 100%;
+}
+
+.flexingsitems {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flexcontent ul {
@@ -1176,18 +1385,33 @@ main.archivemain {
     display: block;
 }
 
+.textanimationply h3 {
+    font-family: Anuv_handwriting;
+    color: #fff;
+    font-size: 115px;
+    text-align: center;
+    letter-spacing: -13px;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 0.8;
+    animation: pichkana 12s infinite;
+}
+
 .shaeaericon {
     position: relative;
 }
+
 .sheareicon {
     position: relative;
 }
-.unionclass{
+
+.unionclass {
     position: relative;
 }
+
 .listsocial {
-    padding: 30px 16px 4px 16px; 
-      background-image: url('/images/bgshapesocil.svg'); 
+    padding: 30px 16px 4px 16px;
+    background-image: url('/images/bgshapesocil.svg');
     background-repeat: no-repeat;
     background-position: center top 0px;
     background-size: 100% 100%;
@@ -1210,8 +1434,8 @@ main.archivemain {
 }
 
 .unionsocial {
-    padding: 30px 15px 5px 15px; 
-          background-image: url('/images/musicbg.svg'); 
+    padding: 30px 15px 5px 15px;
+    background-image: url('/images/musicbg.svg');
     background-repeat: no-repeat;
     background-position: center top 0px;
     background-size: 100% 100%;
@@ -1234,8 +1458,13 @@ main.archivemain {
     margin: 0;
 }
 
-.textanimationply {
-    animation: float 2s ease-in-out infinite;
+
+.contentmusiclist h5 {
+    font-size: 30px;
+    font-family: IBM Plex Mono;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .swiper {
@@ -1250,22 +1479,52 @@ main.archivemain {
 }
 
 .notebg {
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    width: 245px;
-    padding: 30px;
-    height: 70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 309px;
+    height: 90px;
+    padding: 30px 24px;
 }
 
 .notebg h5 {
-    font-family: "Caveat", cursive;
-    font-size: 10px;
-    color: #00000087;
-    transform: rotate(3deg);
+    color: #000000;
     text-align: justify;
     text-transform: uppercase;
-    font-weight: 400;
+    letter-spacing: -6px;
+    font-family: Anuv_handwriting;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: .8;
+    transform: rotate(3deg);
+}
+
+.tiltefou h2 {
+    color: #000;
+    letter-spacing: -63px;
+    width: 470px;
+    margin: 0 auto;
+    font-family: Anuv_handwriting;
+    font-size: 200px;
+    font-weight: 100;
+    line-height: .4;
+    animation: 5s ease-in-out infinite rooteat;
+    position: relative;
+    left: -55px;
+    animation: pichkana 12s infinite;
+}
+
+.mainforyou img {
+    height: 100%;
+}
+
+.mainforyou img {
+    animation: rooteat 5s ease-in-out infinite;
+}
+
+.tiltefou {
+    text-align: center;
+    position: relative;
 }
 
 .noteshape {
@@ -1278,6 +1537,15 @@ img.recording-img1 {
     top: -8px;
     width: 270px;
     left: 3px;
+}
+
+.discriptioncontent h5 {
+    color: #000000b0;
+    max-width: 424px;
+    margin: 0 auto;
+    font-family: '__nextjs-Geist Mono';
+    font-size: 27px;
+    font-weight: 400;
 }
 
 .flexcard {
@@ -1317,28 +1585,36 @@ img.recording-img1 {
 }
 
 .slidercontent p {
-    font-size: 15px;
     text-transform: uppercase;
     color: #fff;
-    font-family: "IBM Plex Mono", monospace;
+    font-family: IBM Plex Mono;
+    font-size: 14px;
     font-weight: 400;
 }
 
-p.caveat {
+h5.caveat {
     color: #fff;
-    font-family: "Caveat";
-    font-size: 10px;
     text-align: justify;
     text-transform: uppercase;
     letter-spacing: 6px;
     text-align: end;
-    line-height: 2;
+    letter-spacing: -2px;
+    font-family: Anuv_handwriting;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.8;
 }
 
 .cardimg {
-    width: 250px;
-    margin: 0 auto;
+    width: 225px;
+    top: 58px;
     position: relative;
+}
+
+.cardimg.rights {
+    left: 38px;
+    width: 330px;
+    top: 50px;
 }
 
 .slidercontent {
@@ -1346,17 +1622,17 @@ p.caveat {
 }
 
 img.recording-img2 {
+    width: 290px;
     position: absolute;
     bottom: -32px;
-    left: 40px;
-    width: 310px;
+    left: 23px;
 }
 
 .slidercontent.text-right {
     text-align: right;
-    display: flex;
-    align-items: end;
+    align-items: anchor-center;
     width: 300px;
+    display: flex;
 }
 
 .swiper-button-next:after,
@@ -1412,14 +1688,21 @@ img.recording-img2 {
 }
 
 .slidercontent.firstcontent {
-    width: 300px;
+    width: 270px;
 }
 
 section.formeyou {
-    padding: 63px 270px;
-    display: flex;
-    align-items: stretch;
     justify-content: center;
+    align-items: stretch;
+    padding: 0px 270px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.mainforyou {
+    height: 756px;
+    position: relative;
 }
 
 .imgforyou {
@@ -1437,7 +1720,7 @@ section.formeyou {
     left: 0;
     right: 0;
     margin: 0 auto;
-    transform: translateY(-50%);
+    transform: translateY(-40%);
 }
 
 button.forbutton {
@@ -1480,9 +1763,6 @@ button.forbutton {
     }
 }
 
-.mainforyou img {
-    animation: rooteat 5s ease-in-out infinite;
-}
 
 .fade-section {
     opacity: 0;
@@ -1501,110 +1781,44 @@ button.forbutton {
     transform: translateY(-40px);
 }
 
-@media screen and (max-width: 1400px) {
-    .flexingsitems {
-        max-width: 590px;
-    }
-
-    .tiltefou svg {
-        width: 260px;
-        height: 100px;
-    }
-
-    .discriptioncontent svg {
-        width: 265px;
-    }
-
+.innercontainer {
+    max-width: 1370px;
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 1250px) {
-    .flexingsitems {
-        max-width: 475px;
-    }
-
-    .playlistfirstsection {
-        padding: 50px 50px;
-    }
-
-    .textanimationply svg {
-        width: 190px;
-        height: 160px;
-        box-shadow: none;
-    }
-
-    .shaeaericon ul a {
-        width: 18px;
-        display: block;
-    }
-
-    .listsocial {
-        padding: 25px 16px 4px 16px;
-        left: 10px;
-    }
-
-    .unionsocial {
-        padding: 25px 15px 5px 15px;
-        left: 28px;
-    }
-
-
-    section.formeyou {
-        padding: 63px 155px;
-    }
+.mainforyou {
+    height: 655px;
 }
 
-@media screen and (max-width: 1024px) {
-    .tiltefou svg {
-        width: 230px;
-        height: 90px;
-    }
 
-    button.forbutton svg {
-        width: 200px;
-    }
+.tiltefou h2 {
+    font-size: 180px;
 }
 
-@media screen and (max-width: 900px) {
-    section.formeyou {
-        padding: 63px 33px;
-    }
-
-    .playlistfirstsection {
-        padding: 50px 0px;
-        flex-wrap: wrap;
-        gap: 0px;
-        align-items: start;
-    }
-
-    .flexingsitems {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .flexcontent h4 {
-        font-size: 25px;
-        line-height: 1.5;
-    }
-
-    .playlistcontent {
-        text-align: justify;
-    }
-
-    .flexcontent ul {
-        font-size: 17px;
-        line-height: 1.5;
-        color: #fff;
-        font-weight: 700;
-        list-style: none;
-    }
+.discriptioncontent h5 {
+    font-size: 25px;
 }
 
-@media screen and (max-width: 767px) {
-    section.formeyou {
-        padding: 63px 0px;
-    }
 
-    .paperimg {
-        width: 100%;
-    }
+.content-foryou {
+    transform: translateY(-45%);
+}
+
+.sliderlist {
+    width: 670px;
+    height: 580px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.large-note-paper.slide2 {
+    transform: rotate(-2deg);
+}
+
+.third-section {
+    position: relative;
+}
+ .stamp-container h4 span {
+    margin-left: 40px;
 }

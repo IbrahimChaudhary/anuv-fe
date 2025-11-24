@@ -631,6 +631,7 @@ button.forbutton {
 }
 
 @media screen and (max-width: 767px) {
+
     section.formeyou {
         padding: 63px 0px;
     }
@@ -638,4 +639,5 @@ button.forbutton {
     .paperimg {
         width: 100%;
     }
+ 
 }

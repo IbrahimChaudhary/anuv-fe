@@ -1,20 +1,44 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./footer/Footer";
 import $ from "jquery";
 
 export default function Home() {
 
-  const handleScroll = () => {
-    const bottomImg = document.querySelector("img.bottom-img");
-    if (!bottomImg) return;
+  const [isOpen, setIsOpen] = useState(false);
+  const [iframeSrc, setIframeSrc] = useState("");
 
-    if (window.scrollY > 50) {
-      bottomImg.classList.add("active");
-    } else {
-      bottomImg.classList.remove("active");
-    }
+  const openModal = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    setIframeSrc("https://www.youtube.com/embed/bP8ATWCvqzw?autoplay=1&rel=0&modestbranding=1");
+    setIsOpen(true);
   };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    // remove src to stop playback when modal closes
+    setTimeout(() => setIframeSrc(""), 300);
+  };
+
+
+const handleScroll = () => {
+  const bottomImg = document.querySelector("img.bottom-img");
+  if (!bottomImg) return;
+
+  // Add "active" after 50px
+  if (window.scrollY > 50) {
+    bottomImg.classList.add("active");
+  } else {
+    bottomImg.classList.remove("active");
+  }
+
+  // Add "hide" after 100px
+  if (window.scrollY > 0) {
+    bottomImg.classList.add("hide");
+  } else {
+    bottomImg.classList.remove("hide");
+  }
+};
 
   useEffect(() => {
         $(document).ready(function () {
@@ -55,7 +79,7 @@ export default function Home() {
 
         <section className="second-section" style={{ backgroundImage: "url('/images/bg1.png')" }}>
           <div className="second-section-box" style={{ backgroundImage: "url('/images/second-box-img.png')" }}>
-            <div className="angal" style={{ backgroundImage: "url('/images/angal.png')" }}> </div>
+            
             <div className="about-anuv">
               <h3>About Anuv </h3>
               {/* <img src="images/about-an.svg" /> */}
@@ -66,6 +90,8 @@ export default function Home() {
                 loyal fanbase. Anuv gained popularity through YouTube and Spotify.
                 He remains an independent artist known for his authenticity.</p>
             </div>
+            <div className="about-right-imgouter">
+            <div className="angal" style={{ backgroundImage: "url('/images/angal.png')" }}> </div>
             <div className="about-right-img">
               <img src="images/about-right-img.jpg" className="rotateanimation" />
             </div>
@@ -73,6 +99,7 @@ export default function Home() {
               <img  className="redstrp" src="images/red-strp.png" />
               <img src="images/text.png" className="text blackstrp" />
 
+            </div>
             </div>
           </div>
         </section>
@@ -97,7 +124,6 @@ export default function Home() {
                 </div>
                 <div className="paper-clip">
                     <img src="./images/kundi.svg" alt="gig" />
-
                   </div>
                   <div className="sliderlist">
                 <div className="large-note-paper slide1">
@@ -231,12 +257,67 @@ export default function Home() {
                 <button className="prev"><img src="images/slider-arro.svg" /></button>
                 <button className="next"><img src="images/slider-arro.svg" /></button> 
               </div>
-              <a href="#" className="watch-button">Watch Now</a>
+              <a href="#" className="watch-button" onClick={openModal}>Watch Now</a>
             </div>
           </div>
  
 
         </section>
+        {isOpen && (
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              background: "rgba(0,0,0,0.7)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 9999,
+            }}
+            onClick={closeModal}
+          >
+            <div
+              role="dialog"
+              aria-modal="true"
+              style={{
+                width: "90%",
+                maxWidth: 960,
+                aspectRatio: "16/9",
+                background: "#000",
+                position: "relative",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.6)",
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                aria-label="Close video"
+                onClick={closeModal}
+                style={{
+                  position: "absolute",
+                  right: 8,
+                  top: 8,
+                  zIndex: 2,
+                  background: "transparent",
+                  border: "none",
+                  color: "#fff",
+                  fontSize: 28,
+                  lineHeight: 1,
+                  cursor: "pointer",
+                }}
+              >
+                ×
+              </button>
+
+              <iframe
+                src={iframeSrc}
+                title="YouTube video player"
+                style={{ width: "100%", height: "100%", border: 0 }}
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
       </main>
        <Footer />
     </>

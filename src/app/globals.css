@@ -132,6 +132,7 @@ img.mobile {
 
 .rotateanimation2 {
     animation: rotateanimation2 1.8s steps(4, end) infinite alternate;
+    background-color: #1a1a1a;
 }
 
 
@@ -1962,7 +1963,7 @@ button.forbutton {
     }
 
     .small-card-content {
-        width: 396px;
+        width: 346px;
         top: 350px;
     }
 
@@ -2137,7 +2138,7 @@ button.forbutton {
     }
 
     .small-card-content {
-        width: 420px;
+        width: 320px;
         top: 350px;
     }
 
@@ -2420,7 +2421,7 @@ button.forbutton {
     }
 
     .small-card-content {
-        width: 300px;
+        width: 220px;
         top: 320px;
     }
 
@@ -2618,8 +2619,8 @@ button.forbutton {
         right: 13px;
     }
 .small-card-content {
-        width: 297px;
-        top: 368px;
+        width: 225px;
+        top: 398px;
     }    
 .afsos {
         width: 50%;
@@ -2860,10 +2861,10 @@ button.forbutton {
     }
 
 .small-card-content {
-        width: 250px;
-        top: 387px;
+        width: 180px;
+        top: 427px;
         transform: rotate(-9deg);
-        left: -7px;
+        left: 165px;
     }
 
 .afsos {
@@ -2944,8 +2945,8 @@ button.forbutton {
     border: 8px solid #e0e0e0; 
 }
     .small-card-content {
-        width: 270px; 
-        left: 40px; 
+        width: 210px; 
+        left: 80px; 
     }
     .letestllestion { 
         transform: rotate(-3deg);

@@ -233,7 +233,7 @@ $(document).ready(function () {
                   </div>
 
                   <div className="polaroid-frame">
-                    <img src="./images/indie-music.png" alt="Artist singing" className="rotatfret polaroid-image" />
+                    <img src="./images/gigdatyes.png" alt="Artist singing" className="rotatfret polaroid-image" />
                   </div>
                 </div>
                 <div className="paper-clip">

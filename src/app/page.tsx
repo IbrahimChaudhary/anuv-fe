@@ -2,17 +2,71 @@
 import { useEffect, useState } from "react";
 import Footer from "./footer/Footer";
 import $ from "jquery";
+import VideoPlayer from "../Components/VideoPlayer";
 
 export default function Home() {
+   const slides = [
+  {
+    id: 1,
+    bgImage: "images/jotum.jpg",
+    watchUrl: "https://youtu.be/ilNt2bikxDI?si=hu8w6urE9rN_3LEX",
+  },
+  {
+    id: 2,
+    bgImage: "images/husn.jpg",
+    watchUrl: "https://youtu.be/gJLVTKhTnog?si=OaiPBRodBbtHTLG7",
+  },
+  {
+    id: 3,
+    bgImage: "images/mjaak.jpg",
+    watchUrl: "https://youtu.be/zx0YGEi32r0?si=ExVjQeBoXCaphx-A",
+  },
+  {
+    id: 4,
+    bgImage: "images/eyes.jpg",
+    watchUrl: "https://youtu.be/hUORvCLETbI?si=ALH023KlhGRQ7wUO",
+  },
+   {
+    id: 4,
+    bgImage: "images/arzkiyah.jpg",
+    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  },
+];
 
+
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const nextSlide = () => {
+    if (activeIndex < slides.length - 1) {
+      setActiveIndex(activeIndex + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (activeIndex > 0) {
+      setActiveIndex(activeIndex - 1);
+    }
+  };
   const [iframeSrc, setIframeSrc] = useState("");
 
-  const openModal = (e?: React.MouseEvent) => {
-    if (e) e.preventDefault();
-    setIframeSrc("https://www.youtube.com/embed/bP8ATWCvqzw?autoplay=1&rel=0&modestbranding=1");
-    setIsOpen(true);
-  };
+  const openModal = (
+  videoUrl: string,
+  e?: React.MouseEvent
+) => {
+  if (e) e.preventDefault();
+
+  // convert youtu.be or watch?v= to embed
+  const videoId = videoUrl.includes("youtu.be")
+    ? videoUrl.split("youtu.be/")[1].split("?")[0]
+    : videoUrl.split("v=")[1].split("&")[0];
+
+  setIframeSrc(
+    `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`
+  );
+
+  setIsOpen(true);
+};
+
 
   const closeModal = () => {
     setIsOpen(false);
@@ -41,20 +95,88 @@ const handleScroll = () => {
 };
 
   useEffect(() => {
-        $(document).ready(function () {
-       
-      $(".nextslide").on("click", function () {
-        $(this).addClass('disab'); 
-        $('.prevslide').removeClass('disab'); 
-        $(".slide2").addClass('active'); 
-        
-      });
-       $(".prevslide").on("click", function () {
-        $(this).addClass('disab'); 
-        $('.nextslide').removeClass('disab');
-        $(".slide2").removeClass('active'); 
-      });
+  //  $(document).ready(function () {
+
+  //   const $slides = $('.large-note-paper-new');
+  //   let currentIndex = 0; // first slide active by default
+
+  //   function updateSlides() {
+  //     $slides.removeClass('active');
+  //     $slides.eq(currentIndex).addClass('active');
+
+  //     // Disable buttons at edges
+  //     $('.prevslide').toggleClass('disab', currentIndex === 0);
+  //     $('.nextslide').toggleClass('disab', currentIndex === $slides.length - 1);
+  //   }
+
+  //   // ✅ INITIAL STATE (IMPORTANT)
+  //     setTimeout(() => {
+  //       updateSlides();
+  //     }, 50);
+
+  //   $('.nextslide').on('click', function () {
+  //     if (currentIndex < $slides.length - 1) {
+  //       currentIndex++;
+  //       updateSlides();
+  //     }
+  //   });
+
+
+
+  //   $('.prevslide').on('click', function () {
+  //     if (currentIndex > 0) {
+  //       currentIndex--;
+  //       updateSlides();
+  //     }
+  //   });
+
+  // });
+
+$(document).ready(function () {
+
+  const $slides = $('.large-note-paper-new');
+  const total = $slides.length;
+  let currentIndex = 0;
+
+  function updateSlides() {
+
+    $slides.removeClass('active');
+
+    $slides.each(function (i) {
+      // circular distance from active slide
+      let distance = (i - currentIndex + total) % total;
+
+      // active = highest, next = second highest, etc
+      $(this).css('z-index', total - distance);
     });
+
+    // active slide
+    $slides.eq(currentIndex).addClass('active');
+
+    $('.prevslide').toggleClass('disab', currentIndex === 0);
+    $('.nextslide').toggleClass('disab', currentIndex === total - 1);
+  }
+
+  setTimeout(updateSlides, 50);
+
+  $('.nextslide').on('click', function () {
+    if (currentIndex < total - 1) {
+      currentIndex++;
+      updateSlides();
+    }
+  });
+
+  $('.prevslide').on('click', function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlides();
+    }
+  });
+
+});
+
+
+
     window.addEventListener("scroll", handleScroll);
     
     return () => {
@@ -65,17 +187,10 @@ const handleScroll = () => {
   return (
     <>
       <main>
-        <section className="main-banner">
-          <img className="top-img" src="images/banner-top.png" />
-
-          <img className="bottom-img" src="images/banner-bottom.png" />
-
-          <div className="auto-text">
-            <h1>Anuv <span>Jain</span> </h1>
-       
-          </div>
-
+        <section className="main-banners">
+            <VideoPlayer />
         </section>
+
 
         <section className="second-section" style={{ backgroundImage: "url('/images/bg1.png')" }}>
           <div className="second-section-box" style={{ backgroundImage: "url('/images/second-box-img.png')" }}>
@@ -93,12 +208,11 @@ const handleScroll = () => {
             <div className="about-right-imgouter">
             <div className="angal" style={{ backgroundImage: "url('/images/angal.png')" }}> </div>
             <div className="about-right-img">
-              <img src="images/about-right-img.jpg" className="rotateanimation" />
+              <img src="images/anuv-about-img.jpg" className="rotateanimation" />
             </div>
             <div className="rose">
               <img  className="redstrp" src="images/red-strp.png" />
               <img src="images/text.png" className="text blackstrp" />
-
             </div>
             </div>
           </div>
@@ -108,7 +222,7 @@ const handleScroll = () => {
           <div className="scribble-line rotateanimation"></div>
             <div className="scribble-line rotateanimation left"></div>
           <div className="innercontainer">
-    <img src="images/gig-bg.png" className="rotateanimation3 gig-bg"></img>
+          <img src="images/gig-bg.png" className="rotateanimation3 gig-bg"></img>
           <div className="main-flexsf">
             
             <div className="large-note-paper">
@@ -126,7 +240,7 @@ const handleScroll = () => {
                     <img src="./images/kundi.svg" alt="gig" />
                   </div>
                   <div className="sliderlist">
-                <div className="large-note-paper slide1">
+                <div className="large-note-paper large-note-paper-new slide1 ">
                   <img className="bgg" src="images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
@@ -134,11 +248,11 @@ const handleScroll = () => {
                     </div>
                     <div className="polaroid-group22">
                       <ul className="dates-list">
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
+                        <li><a href="#" target="_blank">Lucknow..........19.12.25</a></li>
+                        <li><a href="#" target="_blank">Ludhiana..........25.12.25</a></li>
+                        <li><a href="#" target="_blank">Goa..........31.12.25</a></li>
+                        <li><a href="#" target="_blank">Chennai..........04.01.26</a></li>
+                        <li><a href="#" target="_blank">Guwahati..........13.01.26</a></li>
                       </ul>
 
                       
@@ -149,7 +263,7 @@ const handleScroll = () => {
                   <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
-                <div className="large-note-paper slide2">
+                <div className="large-note-paper large-note-paper-new slide2">
                   <img className="bgg" src="images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
@@ -157,11 +271,34 @@ const handleScroll = () => {
                     </div>
                     <div className="polaroid-group22">
                       <ul className="dates-list">
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
-                        <li>Lorem Ipsum..........08.07.25</li>
+                        <li><a href="#" target="_blank">Delhi..........16.01.26</a></li>
+                        <li><a href="#" target="_blank">Ahmedabad..........18.01.26</a></li>
+                        <li><a href="#" target="_blank">Pune..........23.01.26</a></li>
+                        <li><a href="#" target="_blank">Chandigarh..........30.01.26</a></li>
+                        <li><a href="#" target="_blank">Kolkata..........01.02.26</a></li>
+                      </ul>
+
+                      
+                    </div>
+
+                  </div>
+                   <div className="stam circle-wrapper">
+                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                </div>
+                </div>
+                <div className="large-note-paper large-note-paper-new slide3 active">
+                  <img className="bgg" src="images/Names2.svg" />
+                  <div className="polaroid-group-row">
+                    <div className="polaroid-group">
+
+                    </div>
+                    <div className="polaroid-group22">
+                      <ul className="dates-list">
+                        <li><a href="#" target="_blank">Hyderabad..........06.02.26</a></li>
+                        <li><a href="#" target="_blank">Indore..........08.02.26</a></li>
+                        <li><a href="#" target="_blank">Mumbai..........14.02.26</a></li>
+                        <li><a href="#" target="_blank">Jaipur..........20.02.26</a></li>
+                        <li><a href="#" target="_blank">Bengaluru..........22.02.26</a></li>
                       </ul>
 
                       
@@ -193,7 +330,7 @@ const handleScroll = () => {
           </div>
 
           <div className="small-card-content">
-            <img src="images/left-img.svg" alt="Small portrait" className="small-photo rotateanimation2" />
+            <img src="images/photostrip.png" alt="Small portrait" className="small-photo rotateanimation2" />
           </div>
           <div className="green-tape"></div>
 
@@ -203,7 +340,7 @@ const handleScroll = () => {
             <h4>latest <span> release </span></h4>
         
             <div className="letestllestion">
-              <img className="rotateanimation" src="images/maxresdefault.jpg"/>
+              <a target="_blank" href="https://linktr.ee/DastakhatWorldTour2026"><img className="rotateanimation" src="images/maxresdefault.png"/></a>
             </div>
           </div>
 
@@ -213,56 +350,92 @@ const handleScroll = () => {
 
 
         <section className="mains-music-bg">
-              <img src="images/video-slider-bg.png" className="rotateanimation3 gig-bg bottoms"></img>
-          <div className="music-section">
-            <div className="stamp-container">
-              <h4>Music <span>Videos</span> </h4>
-              <div className="stamp-image chain-wrap">
-                
+      <img
+        src="images/video-slider-bg.png"
+        className="rotateanimation3 gig-bg bottoms"
+        alt=""
+      />
 
-                <div className="slider">
-                  <div className="slides">
+      <div className="music-section">
+        <div className="stamp-container">
+          <h4>Music <span>Videos</span></h4>
 
-                    <div className="slide">
-                      <div className="silde-dote-row">
-                        <img className="reletives" src="images/mvideosBG.svg" />
-                        <svg className="chain-svg" viewBox="0 0 520 320" preserveAspectRatio="none" aria-hidden="true">
-                          <defs>
-                            <path id="rectPath" d="M10 10 H510 V310 H10 Z" fill="none" />
-                          </defs>
-                          <use className="moving-chain" href="#rectPath" stroke="#191919" stroke-width="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
+          <div className="stamp-image chain-wrap">
+            <div className="slider">
+              <div
+                className="slides"
+                style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+              >
+                {slides.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`slide ${activeIndex === index ? "active" : ""}`}
+                  >
+                    <div className="silde-dote-row">
+                      <img
+                          className="reletives"
+                          src={slides[index].bgImage}
+                          alt={`Music video ${slides[index].id}`}
+                        />
 
+                      <svg
+                        className="chain-svg"
+                        viewBox="0 0 520 320"
+                        preserveAspectRatio="none"
+                        aria-hidden="true"
+                      >
+                        <defs>
+                          <path
+                            id={`rectPath-${index}`}
+                            d="M10 10 H510 V310 H10 Z"
+                            fill="none"
+                          />
+                        </defs>
+
+                        <use
+                          className="moving-chain"
+                          href={`#rectPath-${index}`}
+                          stroke="#191919"
+                          strokeWidth="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
                     </div>
-
-                    <div className="slide">
-                      <div className="silde-dote-row">
-                        <img className="reletives" src="images/mvideosBG.svg" />
-                        <svg className="chain-svg" viewBox="0 0 520 320" preserveAspectRatio="none" aria-hidden="true">
-                          <defs>
-                            <path id="rectPath" d="M10 10 H510 V310 H10 Z" fill="none" />
-                          </defs>
-                          <use className="moving-chain" href="#rectPath" stroke="#191919" stroke-width="10" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        </svg>
-                      </div>
-
-                    </div>
-
                   </div>
-                </div>
-
-                <button className="prev"><img src="images/slider-arro.svg" /></button>
-                <button className="next"><img src="images/slider-arro.svg" /></button> 
+                ))}
               </div>
-              <a href="#" className="watch-button" onClick={openModal}>Watch Now</a>
             </div>
-          </div>
- 
 
-        </section>
+            {/* Controls */}
+            <button
+              className="prev"
+              onClick={prevSlide}
+              disabled={activeIndex === 0}
+            >
+              <img src="images/slider-arro.svg" alt="prev" />
+            </button>
+
+            <button
+              className="next"
+              onClick={nextSlide}
+              disabled={activeIndex === slides.length - 1}
+            >
+              <img src="images/slider-arro.svg" alt="next" />
+            </button>
+          </div>
+          <a
+            href="#"
+            className="watch-button"
+            onClick={(e) =>
+              openModal(slides[activeIndex].watchUrl, e)
+            }
+          >
+            Watch Now
+          </a>
+        </div>
+      </div>
+    </section>
         {isOpen && (
           <div
             style={{

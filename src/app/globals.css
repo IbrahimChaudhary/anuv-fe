@@ -638,7 +638,13 @@ ul.dates-list li {
     top: 10px;
     right: 0;
     height: 580px;
+    /* z-index: 0; */
+    transform: rotate(0deg);
+    transition: all 1s ease;
 }
+
+
+
 
 .about-right-img {
     background-color: #fff;
@@ -743,6 +749,7 @@ ul.dates-list li {
     left: 0;
     right: 0;
     padding-left: 100px;
+    z-index: 12;
 }
 
 .nav-arrows span {
@@ -993,10 +1000,11 @@ img.rotateanimation3.gig-bg.bottoms {
 
 /*======================== footer CSS ===================*/
 .social-icons a {
-    position: relative;
-    display: inline-block;
     width: 60px;
     height: 60px;
+    position: relative;
+    justify-content: center;
+    display: flex;
 }
 
 .draw-circle {
@@ -1064,7 +1072,12 @@ img.rotateanimation3.gig-bg.bottoms {
 .footer-logo h4 span {
     margin-left: 1.6rem;
 }
-
+svg.commonCLass {
+    filter: invert(1);
+}
+img.commonCLass {
+    filter: invert(1);
+}
 .auto-text h1 span {
     margin-left: 60px;
 }
@@ -1097,15 +1110,46 @@ img.bottom-img.active {
     animation: roserotateback 2s infinite;
 }
 
-.large-note-paper.slide2 {
+/* .large-note-paper.slide {
     transition: 1s all ease;
-}
+}  */
 
-.large-note-paper.slide2.active {
+/* .large-note-paper.active {
     top: 90%;
     right: -150%;
     transform: rotate(-13deg);
+     z-index: 5;
+} */
+ /* .large-note-paper-new.slide1 {
+  z-index: 3;
 }
+
+.large-note-paper-new.slide2 {
+  z-index: 2;
+}
+
+.large-note-paper-new.slide3 {
+  z-index: 1;
+} */
+
+.large-note-paper.active {
+  top: 90%;
+  right: -150%;
+  transform: rotate(-13deg);
+}
+
+
+/* .large-note-paper-new.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 10;
+  top: 90%;
+  right: -150%;
+  transform: rotate(-13deg);
+} */
+
+
 
 img.nextslide.disab,
 img.prevslide.disab {
@@ -1918,8 +1962,8 @@ button.forbutton {
     }
 
     .small-card-content {
-        width: 376px;
-        top: 290px;
+        width: 396px;
+        top: 350px;
     }
 
     section.third-section:before {
@@ -2002,8 +2046,12 @@ button.forbutton {
         font-size: 24px;
     }
 
-    .second-section {
+    /* .second-section {
         margin-top: -170px;
+    } */
+    
+    .second-section {
+        margin-top: 0px;
     }
 
     .about-right-img {
@@ -2089,8 +2137,8 @@ button.forbutton {
     }
 
     .small-card-content {
-        width: 330px;
-        top: 450px;
+        width: 420px;
+        top: 350px;
     }
 
     .afsos {
@@ -2372,8 +2420,8 @@ button.forbutton {
     }
 
     .small-card-content {
-        width: 236px;
-        top: 350px;
+        width: 300px;
+        top: 320px;
     }
 
     .shapesret {
@@ -2468,7 +2516,8 @@ button.forbutton {
 
     .second-section {
         height: 75vh;
-        margin-top: -275px;
+        margin-top: 0px;
+        /* margin-top: -275px; */
     }
 
 }
@@ -2538,7 +2587,8 @@ button.forbutton {
 
     .second-section {
         height: 740px;
-        margin-top: -390px;
+         margin-top: 0px;
+        /* margin-top: -390px; */
     }
 
     .scribble-line {
@@ -2631,7 +2681,8 @@ button.forbutton {
 
     .second-section {
         height: 100vh;
-        margin-top: -140px;
+         margin-top: 0px;
+        /* margin-top: -140px; */
     }
 
     .about-right-imgouter {
@@ -2672,7 +2723,8 @@ button.forbutton {
     }
 
     .second-section {
-        margin-top: -140px;
+        /* margin-top: -140px; */
+        margin-top: 0px;
         padding-top: 45%;
     }
 
@@ -2710,6 +2762,9 @@ button.forbutton {
     img.gig-bg {
         height: 116%;
         inset: -154px 0 0 0px;
+    }
+    .social-icons {
+        gap: 10px;
     }
 }
 
@@ -2841,6 +2896,7 @@ button.forbutton {
 }
 .social-icons a img {
     width: 30px;
+    padding: 4px;
 }
 .social-icons a {
     width: 32px;
@@ -2860,7 +2916,8 @@ button.forbutton {
 }
 @media screen and (max-width: 390px) {
 .second-section {
-        margin-top: -140px;
+        /* margin-top: -140px; */
+         margin-top: 0px;
         padding-top: 60%;
     }
        .about-right-img {
@@ -2887,11 +2944,25 @@ button.forbutton {
     border: 8px solid #e0e0e0; 
 }
     .small-card-content {
-        width: 250px; 
-        left: 20px; 
+        width: 270px; 
+        left: 40px; 
     }
     .letestllestion { 
         transform: rotate(-3deg);
     }
 
+}
+
+
+
+/* 12 dec 2025 */
+.large-note-paper .polaroid-group-row .dates-list a {
+    text-decoration: none;
+    color: #000;
+}
+.paycard.first-custom-class {
+    max-width: 300px !important;
+}
+.contentmusiclist {
+    text-align: center;
 }

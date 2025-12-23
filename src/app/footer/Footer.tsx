@@ -8,9 +8,12 @@ export default function Footer() {
       duration: 800,
       once: false,
     });
+    setTimeout(() => {
+      AOS.refreshHard();
+    }, 500);
   }, []);
   return (
-    <footer className="footer" data-aos="fade-up">
+    <footer className="footer" data-aos="fade-up" >
       <div className='footerinner'>
       <div className="footer-logo">
         <h4> for <span>more</span>  <span>updates</span></h4>

@@ -23,11 +23,16 @@ export default function Home() {
   },
   {
     id: 4,
+    bgImage: "images/antariksh.jpeg",
+    watchUrl: "https://youtu.be/41yIVNzGye8?si=UFrfoOApri8r5JZy",
+  },
+  {
+    id: 5,
     bgImage: "images/eyes.jpg",
     watchUrl: "https://youtu.be/hUORvCLETbI?si=ALH023KlhGRQ7wUO",
   },
    {
-    id: 4,
+    id: 6,
     bgImage: "images/arzkiyah.jpg",
     watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
   },
@@ -221,7 +226,7 @@ $(document).ready(function () {
         <section className="third-section">
           <div className="scribble-line rotateanimation"></div>
             <div className="scribble-line rotateanimation left"></div>
-          <div className="innercontainer">
+          <div className="innercontainer sliderBlock">
           <img src="images/gig-bg.png" className="rotateanimation3 gig-bg"></img>
           <div className="main-flexsf">
             
@@ -248,11 +253,11 @@ $(document).ready(function () {
                     </div>
                     <div className="polaroid-group22">
                       <ul className="dates-list">
-                        <li><a href="#" target="_blank">Lucknow..........19.12.25</a></li>
-                        <li><a href="#" target="_blank">Ludhiana..........25.12.25</a></li>
-                        <li><a href="#" target="_blank">Goa..........31.12.25</a></li>
-                        <li><a href="#" target="_blank">Chennai..........04.01.26</a></li>
-                        <li><a href="#" target="_blank">Guwahati..........13.01.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/music-at-repertwahr-festival/ET00465232" target="_blank">Lucknow..........19.12.25</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/the-sneak-n-street-fest-6-0/ET00472057" target="_blank">Ludhiana..........25.12.25</a></li>
+                        <li><a href="https://link.district.in/DSTRKT/4oxualxk" target="_blank">Goa..........31.12.25</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-live-in-chennai/ET00472732" target="_blank">Chennai..........04.01.26</a></li>
+                        <li><a href="https://link.district.in/DSTRKT/4tehg3y0" target="_blank">Guwahati..........13.01.26</a></li>
                       </ul>
 
                       
@@ -271,11 +276,11 @@ $(document).ready(function () {
                     </div>
                     <div className="polaroid-group22">
                       <ul className="dates-list">
-                        <li><a href="#" target="_blank">Delhi..........16.01.26</a></li>
-                        <li><a href="#" target="_blank">Ahmedabad..........18.01.26</a></li>
-                        <li><a href="#" target="_blank">Pune..........23.01.26</a></li>
-                        <li><a href="#" target="_blank">Chandigarh..........30.01.26</a></li>
-                        <li><a href="#" target="_blank">Kolkata..........01.02.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-delhi/ET00470692" target="_blank">Delhi..........16.01.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-ahmedabad/ET00470481" target="_blank">Ahmedabad..........18.01.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-pune/ET00470688" target="_blank">Pune..........23.01.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-chandigarh/ET00470682" target="_blank">Chandigarh..........30.01.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-kolkata/ET00470691" target="_blank">Kolkata..........01.02.26</a></li>
                       </ul>
 
                       
@@ -294,11 +299,11 @@ $(document).ready(function () {
                     </div>
                     <div className="polaroid-group22">
                       <ul className="dates-list">
-                        <li><a href="#" target="_blank">Hyderabad..........06.02.26</a></li>
-                        <li><a href="#" target="_blank">Indore..........08.02.26</a></li>
-                        <li><a href="#" target="_blank">Mumbai..........14.02.26</a></li>
-                        <li><a href="#" target="_blank">Jaipur..........20.02.26</a></li>
-                        <li><a href="#" target="_blank">Bengaluru..........22.02.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-hyderabad/ET00470690" target="_blank">Hyderabad..........06.02.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-indore/ET00470486" target="_blank">Indore..........08.02.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-mumbai/ET00470487" target="_blank">Mumbai..........14.02.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-jaipur/ET00470489" target="_blank">Jaipur..........20.02.26</a></li>
+                        <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-bengaluru/ET00470482" target="_blank">Bengaluru..........22.02.26</a></li>
                       </ul>
 
                       
@@ -378,6 +383,10 @@ $(document).ready(function () {
                           alt={`Music video ${slides[index].id}`}
                         />
 
+                      <a
+                      href="#"
+                      onClick={(e) => openModal(slides[activeIndex].watchUrl, e)
+                      }>
                       <svg
                         className="chain-svg"
                         viewBox="0 0 520 320"
@@ -401,6 +410,7 @@ $(document).ready(function () {
                           strokeLinejoin="round"
                         />
                       </svg>
+                      </a>
                     </div>
                   </div>
                 ))}

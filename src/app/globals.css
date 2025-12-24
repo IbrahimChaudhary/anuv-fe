@@ -599,10 +599,9 @@ ul.dates-list li {
 }
 
 .scribble-line.left {
-    margin-left: auto;
-    right: 0px;
-    bottom: 35%;
-    top: auto;
+   top: auto;
+  bottom: 35%;
+  right: 15px;
 }
 
 .main-flexsf {
@@ -990,7 +989,7 @@ img.gig-bg {
     width: 102%;
     height: 117.2%;
     position: absolute;
-    inset: -154px 0 0 -37px;
+    inset: -154px 0 0 -15px;
 }
 
 img.rotateanimation3.gig-bg.bottoms {
@@ -1874,6 +1873,7 @@ button.forbutton {
 
 .third-section {
     position: relative;
+    overflow: hidden;
 }
 
 .stamp-container h4 span {
@@ -2747,9 +2747,17 @@ button.forbutton {
         margin-right: -46%;
     }
     .about-right-imgouter {
-        max-width: 49%; 
-        top: -260px;
-        left: -28%;
+       max-width: 49%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-90%)
+    }
+    .angal{
+        background-size: contain;
+    width: 16px;
+    height: 66px;
+    top: -40px;
+    right: 0;
     }
     .second-section-box { 
         margin-right: -55%;
@@ -2759,7 +2767,33 @@ button.forbutton {
         background-position: left center;
         height: 420px;
         margin-right: 0%;
+        background: #cfcbc7;
+            background-image: none;
+            background-image: unset !important;
     }
+    .about-anuv {
+    padding: 80px 30px;
+    width: 100%;
+  }
+   .prev {
+    left: 0;
+  }
+    .next {
+    right: 0;
+  }
+   ul.dates-list li {
+    font-size: 15px;
+  }
+   .silde-dote-row {
+    width: 100%;
+    padding: 7px;
+    max-width: 80%;
+    margin: auto;
+  }
+  .about-anuv p {
+	font-size: 16px;
+	line-height: 20px;
+}
     img.gig-bg {
         height: 116%;
         inset: -154px 0 0 0px;
@@ -2799,9 +2833,9 @@ button.forbutton {
         font-size: 11px;
     }
     .about-right-imgouter {
-        max-width: 100%;
+        /* max-width: 100%;
         top: -315px;
-        left: -19%;
+        left: -19%; */
     }
     .sliderlist {
     width: 100%;
@@ -2848,7 +2882,7 @@ button.forbutton {
     }
     .shapesret {
         width: 179px;
-        top: 90px;
+        top: -256px;
         left: 160px;
     }
 .footer-widgets { 
@@ -2966,4 +3000,185 @@ button.forbutton {
 }
 .contentmusiclist {
     text-align: center;
+}
+
+
+/* ================== */
+
+.sliderBlock{
+  /* overflow: hidden; */
+}
+
+
+@media screen and (width <= 575px){
+    .sliderBlock{
+  overflow: hidden;
+}
+.about-right-imgouter {
+    max-width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -90%);
+  }
+   body .second-section-box {
+    margin-top: 200px;
+    margin-right: 0;
+  }
+  body .about-anuv {
+    width: 100%;
+  }
+   body .sliderlist {
+  width: 100%;
+    height: 500px;
+    margin-top: 5vh;
+    position: relative;
+  }
+  body  .polaroid-frame {
+   max-width: 100%;
+    height: 100%;
+    position: static;
+    top: 80px;
+    left: 14px;
+    margin-top: 10vh;
+  }
+  body .blue-tape {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+ 
+body .polaroid-group22 {
+	min-width: 240px;
+	width: 100%;
+	height: 100%;
+	padding: 31px;
+}
+body .footer-widgets{
+    /* display: none; */
+}
+/* body .large-note-paper {
+	width: 100%;
+    transform: unset !important;
+     height: auto;
+     position: relative;
+}
+body  .large-note-paper.active {
+	position: relative;
+    top: unset;
+    right: unset;
+    height: auto;
+} */
+ .main-flexsf {
+	position: relative;
+	height: 1500px;
+}
+.large-note-paper {
+	width: 100%;
+	height: 437px;
+}
+ body ul.dates-list li {
+    font-size: 22px;
+  }
+  .footer-widgets {
+	padding-left: 0;
+    position: relative;
+    z-index: 9;	
+}
+
+body .main-flexsf > .large-note-paper{
+ height: auto
+}
+.footer-widgets .nav-arrows span {
+	/* background: #fff; */
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	min-width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-widgets .nav-arrows span img {
+	max-width: 100%;
+	max-width: 17px;
+}
+body .small-card-content {
+	width: 100%;
+	left: 80px;
+	position: static;
+}
+.main-banners {
+	height: calc(100vh);
+    overflow: hidden;
+    video{
+        width: 100%;
+  height: 100vh;
+  transform: scale(4);
+    }
+}
+ body img.gig-bg {
+    height: 100%;
+    inset: -154px 0 0;
+  }
+body .afsos {
+	width: 100%;
+	margin-top: 10vh;
+	top: 0;
+	right: 0;
+}
+body .about-anuv p {
+	font-size: 16px;
+}
+ body .afsos h4 {
+    margin-left: 0;
+    font-size: 11vh;
+    line-height: normal;
+    text-align: center;
+  }
+  body .polaroid-group-row {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	text-align: center;
+}
+ body .stamp-image.chain-wrap {
+    max-width: 45%;
+    width: 100%;
+  }
+
+
+         .footer-widgets {
+        bottom: 39vh;
+    }
+}
+
+@media screen and (width <= 475px){
+     body ul.dates-list li {
+    font-size: 15px;
+  }
+  .main-flexsf {
+	height: 1200px;
+	position: relative;
+}
+body .polaroid-group-row {
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 32%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+}
+
+@media screen and (width=480) {
+     .footer-widgets {
+        bottom: 24vh;
+    }
+     .shapesret {
+        width: 179px;
+        top: -160px;
+        left: 160px;
+    }
 }

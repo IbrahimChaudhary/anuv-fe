@@ -45,7 +45,7 @@ export default function Foryou() {
           </div>
           <div className="flexcontent">
             <div className="textanimationply">
-              <h3>hope this reaches<br/> to you</h3>
+              <h3>hope this reaches<br/> to you..</h3>
               <div className="contentmusiclist">
                 <h5>Gul................3:37</h5>
                 <h5>Arz Kiya hai.......4:54</h5>
@@ -95,7 +95,7 @@ export default function Foryou() {
           </div>
           <div className="flexcontent">
            <div className="textanimationply">
-              <h3>i don’t want to break <br/>my sleep now </h3>
+              <h3>i don’t want to break <br/>my sleep now..</h3>
               <div className="contentmusiclist">
                 <h5>Ocean..........4:13</h5>
                 <h5>Majaak..............3:32</h5>
@@ -208,7 +208,7 @@ export default function Foryou() {
           </div>
           <div className="flexcontent">
             <div className="textanimationply"> 
-           <h3>feel like I could keep<br/> listening to you.. </h3>
+           <h3>feel like I could keep<br/> listening to you..</h3>
               <div className="contentmusiclist">
                 <h5>Baarishein..........3:27</h5>
                 <h5>Mishri..............3:20</h5>
@@ -263,7 +263,7 @@ export default function Foryou() {
           </div>
           <div className="flexcontent">
            <div className="textanimationply"> 
-            <h3>wish you could stay<br/>  a little longer.. </h3>
+            <h3>wish you could stay<br/>  a little longer..</h3>
               <div className="contentmusiclist">
                 <h5>Maula..........3:27</h5>
                 <h5>Mishri..............3:20</h5>

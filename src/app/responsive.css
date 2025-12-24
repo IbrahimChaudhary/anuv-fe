@@ -14,9 +14,9 @@
         transition: 1s;
     }
 
-    .navbar.open {
-        right: 0px;
-    }
+     .navbar.open {
+    right: 20px;
+  }
 
     .menu-icon img {
         transition: all 1s;
@@ -32,9 +32,9 @@
         transform: rotate(90deg);
     }
 
-    .navbox {
-        inset: -34px 0% auto !important;
-    }
+     .navbox {
+    inset: -50px 0% auto !important;
+  }
 
     /*======== archives page =========*/
     .swiper-slide {

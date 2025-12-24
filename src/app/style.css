@@ -462,6 +462,7 @@ ul.dates-list li {
   margin-top: -115px;
   background-position: center center;
   height: auto;
+
 }
 .tiltefou img {
   width: 460px;
@@ -950,3 +951,7 @@ button:hover {
   text-align: left;
   padding: 1em;
 }
+
+
+
+/* ================= */

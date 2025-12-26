@@ -10,7 +10,7 @@ export default function Header() {
     const links = document.querySelectorAll(".link");
 
     links.forEach((link) => {
-      const navbox = link.closest(".navbox");
+      const navbox = link.closest(".navbox") as HTMLElement | null;
       if (!navbox) return;
 
       const handleEnter = () => {

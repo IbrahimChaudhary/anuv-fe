@@ -484,9 +484,10 @@ section {
 }
 
 .footer .footerinner {
+    text-align: center;
     background-color: #1A1A1A;
     padding: 90px 20px;
-    text-align: center;
+    opacity: 1;
 }
 
 .footer-logo svg {
@@ -2500,7 +2501,7 @@ button.forbutton {
         width: 200px;
     }
       section.third-section:before {
-        height: 130px;
+        height: 136px;
     }
 
 }

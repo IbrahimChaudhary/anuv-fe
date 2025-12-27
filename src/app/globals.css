@@ -969,20 +969,25 @@ section.mains-music-bg {
 }
 
 section.third-section::before {
-    content: "";
+     content: "";
     background-image: url(/images/bottom-boder.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%; 
+    background-size: 100% 100%;
+    width: 100%;
     height: 134px;
     position: absolute;
-    bottom: -107px;
-    z-index: 99;
+    bottom: -147px;
+    z-index: 100;
 }
 
 /*=====================third-section ===================*/
 .third-section {
     position: relative;
+    overflow: unset;
+}
+
+.third-section .innercontainer.sliderBlock {
+    overflow: hidden;
 }
 
 img.gig-bg {
@@ -1873,7 +1878,7 @@ button.forbutton {
 
 .third-section {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .stamp-container h4 span {
@@ -1970,7 +1975,7 @@ button.forbutton {
     section.third-section:before {
         background-size: 100%;
         width: 100%;
-        height: 110px;
+        height: 113px;
     }
 
     .silde-dote-row {
@@ -2162,6 +2167,7 @@ button.forbutton {
     .second-section-box {
         margin: 0px auto 0px;
     }
+ 
 
 }
 
@@ -2277,11 +2283,14 @@ button.forbutton {
     .about-right-img img {
         height: 230px;
     }
-.angal {
+    .angal {
         width: 20px;
         height: 70px;
         top: 22px;
         right: 66px;
+    }
+    section.third-section:before {
+        height: 90px;
     }
 }
 
@@ -2490,6 +2499,9 @@ button.forbutton {
     .scribble-line {
         width: 200px;
     }
+      section.third-section:before {
+        height: 130px;
+    }
 
 }
 
@@ -2520,6 +2532,9 @@ button.forbutton {
         margin-top: 0px;
         /* margin-top: -275px; */
     }
+    /* section.third-section:before {
+        height: 135px;
+    } */
 
 }
 
@@ -2793,13 +2808,16 @@ button.forbutton {
   .about-anuv p {
 	font-size: 16px;
 	line-height: 20px;
-}
+    }
     img.gig-bg {
         height: 116%;
         inset: -154px 0 0 0px;
     }
     .social-icons {
         gap: 10px;
+    }
+        section.third-section:before {
+        height: 170px;
     }
 }
 
@@ -2925,28 +2943,31 @@ button.forbutton {
         width: 100%;
         height: 107px;
     }
-.footer-logo h4 { 
-    letter-spacing: -2rem; 
-    font-size: 85px; 
-}
-.social-icons a img {
-    width: 30px;
-    padding: 4px;
-}
-.social-icons a {
-    width: 32px;
-    height: 30px; 
-}
-.social-icons { 
-    margin-top: 20px; 
-}
-.footer .footerinner { 
-    padding: 40px 20px;
-}
-.newsletter button { 
-    padding: 10px 15px; 
-    font-size: 14px; 
-}
+    .footer-logo h4 { 
+        letter-spacing: -2rem; 
+        font-size: 85px; 
+    }
+    .social-icons a img {
+        width: 30px;
+        padding: 4px;
+    }
+    .social-icons a {
+        width: 32px;
+        height: 30px; 
+    }
+    .social-icons { 
+        margin-top: 20px; 
+    }
+    .footer .footerinner { 
+        padding: 40px 20px;
+    }
+    .newsletter button { 
+        padding: 10px 15px; 
+        font-size: 14px; 
+    }
+    section.third-section:before {
+        height: 160px;
+    }
  
 }
 @media screen and (max-width: 390px) {

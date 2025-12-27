@@ -2968,6 +2968,11 @@ button.forbutton {
     }
     section.third-section:before {
         height: 160px;
+        bottom: -115px;
+    }
+
+    .third-section {
+        overflow: hidden;
     }
  
 }

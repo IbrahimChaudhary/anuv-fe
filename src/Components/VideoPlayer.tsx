@@ -7,7 +7,7 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     // Check if video file exists in public folder
-    fetch('/video/banner.mp4', { method: 'HEAD' })
+    fetch('/video/firstvideo.mp4', { method: 'HEAD' })
       .then((res) => {
         if (res.ok) setVideoExists(true);
       })
@@ -25,7 +25,7 @@ const VideoPlayer = () => {
           className="w-full h-auto"
           style={{width: "100%", height: "100%"}}
         >
-          <source src="/video/banner.mp4" type="video/mp4" />
+          <source src="/video/firstvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       ) : (

@@ -3,9 +3,16 @@ import { useEffect, useState } from "react";
 import Footer from "./footer/Footer";
 import $ from "jquery";
 import VideoPlayer from "../Components/VideoPlayer";
+import { watch } from "fs";
 
 export default function Home() {
    const slides = [
+    {
+      id:1,
+      bgImage:"images/baarishein.jpg",
+      watchUrl:"https://youtu.be/9fKQJcbd-jY?si=XFvhdDY7VVzLK3Xc",
+
+    },
   {
     id: 1,
     bgImage: "images/jotum.jpg",
@@ -36,6 +43,36 @@ export default function Home() {
     bgImage: "images/arzkiyah.jpg",
     watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
   },
+   {
+    id: 7,
+    bgImage: "images/arzkiyah.jpg",
+    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  },
+   {
+    id: 8,
+    bgImage: "images/arzkiyah.jpg",
+    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  },
+   {
+    id: 9 ,
+    bgImage: "images/arzkiyah.jpg",
+    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  },
+   {
+    id: 10,
+    bgImage: "images/arzkiyah.jpg",
+    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  },
+   {
+    id: 11,
+    bgImage: "images/arzkiyah.jpg",
+    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  },
+  {
+    id: 12,
+    bgImage: "images/",
+    watchUrl: "https://youtu.be/2FhgKp_lfJQ?si=riHIx53ATdKfZsiQ",
+  }
 ];
 
 
@@ -291,7 +328,7 @@ $(document).ready(function () {
                   <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
-                <div className="large-note-paper large-note-paper-new slide3 active">
+                 <div className="large-note-paper large-note-paper-new slide3">
                   <img className="bgg" src="images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
@@ -305,10 +342,107 @@ $(document).ready(function () {
                         <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-jaipur/ET00470489" target="_blank">Jaipur..........20.02.26</a></li>
                         <li><a href="https://in.bookmyshow.com/events/anuv-jain-dastakhat-india-tour-bengaluru/ET00470482" target="_blank">Bengaluru..........22.02.26</a></li>
                       </ul>
-
-                      
                     </div>
+                  </div>
+                   <div className="stam circle-wrapper">
+                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                </div>
+                </div>
+                <div className="large-note-paper large-note-paper-new slide4 ">
+                  <img className="bgg" src="images/Names2.svg" />
+                  <div className="polaroid-group-row">
+                    <div className="polaroid-group">
 
+                    </div>
+                    <div className="polaroid-group22">  
+                      <ul className="dates-list">
+                        <li><a href="#" target="_blank">Dubai..........12.04.26</a></li>
+                        <li><a href="#" target="_blank">Chicago..........01.05.26</a></li>
+                        <li><a href="#" target="_blank">Boston..........03.05.26</a></li>
+                        <li><a href="#" target="_blank">New York..........05.05.26</a></li>
+                        <li><a href="#" target="_blank">Atlanta..........08.05.26</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                   <div className="stam circle-wrapper">
+                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                </div>
+                </div>
+                <div className="large-note-paper large-note-paper-new slide5 ">
+                  <img className="bgg" src="images/Names2.svg" />
+                  <div className="polaroid-group-row">
+                    <div className="polaroid-group">
+
+                    </div>
+                    <div className="polaroid-group22">  
+                      <ul className="dates-list">
+                        <li><a href="#" target="_blank">Dallas..........09.05.26</a></li>
+                        <li><a href="#" target="_blank">San Francisco..........11.05.26</a></li>
+                        <li><a href="#" target="_blank">Boston..........03.05.26</a></li>
+                        <li><a href="#" target="_blank">Singapore..........28.07.26</a></li>
+                        <li><a href="#" target="_blank">Malaysia..........29.07.26</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                   <div className="stam circle-wrapper">
+                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                </div>
+                </div>
+                <div className="large-note-paper large-note-paper-new slide6">
+                  <img className="bgg" src="images/Names2.svg" />
+                  <div className="polaroid-group-row">
+                    <div className="polaroid-group">
+
+                    </div>
+                    <div className="polaroid-group22">  
+                      <ul className="dates-list">
+                        <li><a href="https://tickets.393murray.com.au/outlet/event/809005b6-af49-41f9-a666-3b383c239cd6?utm_source=Oztix&utm_medium=Website" target="_blank">Perth..........31.07.26</a></li>
+                        <li><a href="https://premier.ticketek.com.au/events/JAINANUV26/venues/NMO/performances/ENMO2026826AJ?clickref=1100lBNX46a2&utm_source=spotify&utm_medium=referral&utm_campaign=spotify_events" target="_blank">Sydney..........11.05.26</a></li>
+                        <li><a href="https://premier.ticketek.com.au/events/JAINANUV26/venues/FRM/performances/EFMC2026830AJ?clickref=1011lBV7eKmM&utm_source=spotify&utm_medium=referral&utm_campaign=spotify_events" target="_blank">Melbourne..........06.08.26</a></li>
+                        <li><a href="https://www.moshtix.com.au/v2/event/anuv-jain-dastakhat-world-tour-2026/188497?utm_medium=affiliate&clickId=SdURcqXkZxycTDf3ytyoHTtWUkpVHO1cZ2IBwQ0&ircid=23905&camefrom=CFC_BUYAT_296934&impradid=296934&REFERRAL_ID=tmfeedbuyat296934&wt.mc_id=aff_BUYAT_296934&utm_source=296934-Spotify&impradname=Spotify&irgwc=1&afsrc=1" target="_blank">Adelaide..........08.08.26</a></li>
+                        <li><a href="https://www.moshtix.com.au/v2/event/anuv-jain-dastakhat-world-tour-2026/188497?utm_medium=affiliate&clickId=SdURcqXkZxycTDf3ytyoHTtWUkpVHO1cZ2IBwQ0&ircid=23905&camefrom=CFC_BUYAT_296934&impradid=296934&REFERRAL_ID=tmfeedbuyat296934&wt.mc_id=aff_BUYAT_296934&utm_source=296934-Spotify&impradname=Spotify&irgwc=1&afsrc=1" target="_blank">Brisbane..........09.08.26</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                   <div className="stam circle-wrapper">
+                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                </div>
+                </div>
+                <div className="large-note-paper large-note-paper-new slide7">
+                  <img className="bgg" src="images/Names2.svg" />
+                  <div className="polaroid-group-row">
+                    <div className="polaroid-group">
+
+                    </div>
+                    <div className="polaroid-group22">  
+                      <ul className="dates-list">
+                        <li><a href="https://www.ticketmaster.fr/fr/manifestation/anuv-jain-billet/idmanif/640461/idtier/18864121?utm_medium=affiliate&clickId=SdURcqXkZxycTDf3ytyoHTtWUkpVHORwZ2IBwQ0&irgwc=1&afsrc=1&utm_source=Spotify&utm_campaign=296934&utm_content=1107977_7516" target="_blank">Paris..........16.09.26</a></li>
+                        <li><a href="https://www.eventim.de/noapp/event/anuv-jain-dastakhat-tour-batschkapp-20915051/?affiliate=IFY&utm_source=IFY&utm_medium=dp&utm_campaign=spotify&clickref=1100lBNX4s9Z&affiliate=IFY&utm_campaign=spotify&utm_medium=dp&utm_source=IFY" target="_blank">Frankfurt..........18.09.26</a></li>
+                        <li><a href="https://www.eventim.de/noapp/event/anuv-jain-dastakhat-tour-columbia-theater-20919065/?affiliate=IFY&utm_source=IFY&utm_medium=dp&utm_campaign=spotify&clickref=1100lBNX4uvL&affiliate=IFY&utm_campaign=spotify&utm_medium=dp&utm_source=IFY" target="_blank">Berlin..........19.09.26</a></li>
+                        <li><a href="https://www.tickettailor.com/events/theconcertcornerdhop/1949323/r/anuv-glasgow" target="_blank">Glasgow..........24.09.26</a></li>
+                        <li><a href="https://www.tickettailor.com/events/theconcertcornerdhop/1949308/r/anuv-mcr" target="_blank">Manchester..........26.09.26</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                   <div className="stam circle-wrapper">
+                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                </div>
+                </div>
+                <div className="large-note-paper large-note-paper-new slide8 active">
+                  <img className="bgg" src="images/Names2.svg" />
+                  <div className="polaroid-group-row">
+                    <div className="polaroid-group">
+
+                    </div>
+                    <div className="polaroid-group22">  
+                      <ul className="dates-list">
+                       
+                        <li><a href="https://www.tickettailor.com/events/theconcertcornerdhop/1949339/r/anuv-bham" target="_blank">Birmingham..........27.09.26</a></li>
+                        <li><a href="https://www.tickettailor.com/events/theconcertcornerdhop/1949336/r/anuv-ldn" target="_blank">London..........30.09.26</a></li>
+                        <li><a href="https://www.ticketmaster.ie/anuv-jain-dublin-01-10-2026/event/1800636ECC85D790?utm_medium=affiliate&clickId=R98S9lXkexycTDf3ytyoHTtWUkpVHL3cZ2IBwQ0&irgwc=1&afsrc=1&utm_source=296934-Spotify&utm_campaign=296934&ircid=23889&camefrom=CFC_BUYAT_296934" target="_blank">Dublin..........01.10.26</a></li>
+                        <li><a href="https://www.tickettailor.com/events/theconcertcornerdhop/1949333/r/anuv-amsterdam" target="_blank">Amsterdam..........04.10.26</a></li>
+                      </ul>
+                    </div>
                   </div>
                    <div className="stam circle-wrapper">
                   <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />

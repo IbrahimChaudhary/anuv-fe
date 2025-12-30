@@ -2,17 +2,10 @@
 import { useEffect, useState } from "react";
 import Footer from "./footer/Footer";
 import $ from "jquery";
-import VideoPlayer from "../Components/VideoPlayer";
-import { watch } from "fs";
+import VideoPlayerThird from "../Components/VideoPlayerThird";
 
 export default function Home() {
    const slides = [
-    {
-      id:1,
-      bgImage:"images/baarishein.jpg",
-      watchUrl:"https://youtu.be/9fKQJcbd-jY?si=XFvhdDY7VVzLK3Xc",
-
-    },
   {
     id: 1,
     bgImage: "images/jotum.jpg",
@@ -43,35 +36,46 @@ export default function Home() {
     bgImage: "images/arzkiyah.jpg",
     watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
   },
-   {
-    id: 7,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
-  },
-   {
-    id: 8,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
-  },
-   {
-    id: 9 ,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
-  },
-   {
-    id: 10,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
-  },
-   {
-    id: 11,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
-  },
+  //New 30/dec
   {
     id: 12,
-    bgImage: "images/",
+    bgImage: "images/Afsos.jpg",
     watchUrl: "https://youtu.be/2FhgKp_lfJQ?si=riHIx53ATdKfZsiQ",
+  },
+  {
+    id: 13,
+    bgImage: "images/Gul_final_artwork.jpeg",
+    watchUrl: "https://youtu.be/AMVE18zBp0w?si=BL01bmo26qPHuKVf",
+  },
+  {
+    id: 14,
+    bgImage: "images/ALAG_AASMAAN_OPEN_FILE.jpg",
+    watchUrl: "https://youtu.be/vA86QFrXoho?si=6wpQKc1ORc8rzVq1",
+  },
+  {
+    id: 15,
+    bgImage: "images/Mishri_Artwork.jpg",
+    watchUrl: "https://youtu.be/0P3Gt-60yLc?si=s9LhNtu3Wu1RNZ4_",
+  },
+  {
+    id: 16,
+    bgImage: "images/Maula_artwork.jpg",
+    watchUrl: "https://youtu.be/CvV5P-mgaR8?si=tumYPrwdye1mSCEI",
+  },
+  {
+    id: 17,
+    bgImage: "images/Riha_Square_with_text.jpg",
+    watchUrl: "https://youtu.be/9et5qzuzbQM?si=nnn3l-tg-ZHBND12",
+  },
+  {
+    id: 18,
+    bgImage: "images/Ocean_iTunes_version.jpg",
+    watchUrl: "https://youtu.be/Y2zc2IeVX_g?si=zrft6JaoSyjS4toc",
+  },
+  {
+    id: 19,
+    bgImage: "images/Baarishein_final_artwork.jpg",
+    watchUrl: "https://youtu.be/PJWemSzExXs?si=b8bS8aexl4Ymw-95",
   }
 ];
 
@@ -230,7 +234,7 @@ $(document).ready(function () {
     <>
       <main>
         <section className="main-banners">
-            <VideoPlayer />
+            <VideoPlayerThird />
         </section>
 
 
@@ -516,7 +520,6 @@ $(document).ready(function () {
                           src={slides[index].bgImage}
                           alt={`Music video ${slides[index].id}`}
                         />
-
                       <a
                       href="#"
                       onClick={(e) => openModal(slides[activeIndex].watchUrl, e)

@@ -56,7 +56,7 @@ export default function Foryou() {
 
               <div className="content-foryou">
                 <div className="tiltefou">
-                  <h2> form <span>me</span> <br />  <span className="marginleft">to</span> <span>you</span></h2>
+                  <h2> from <span>me</span> <br />  <span className="marginleft">to</span> <span>you</span></h2>
                 </div>
                 <div className="discriptioncontent">
                   <h5>A little playlist, for the way you're feeling today</h5>

@@ -44,7 +44,7 @@ export default function Home() {
   },
   {
     id: 13,
-    bgImage: "images/Gul_final_artwork.jpeg",
+    bgImage: "images/Gul_final_artwork.jpg",
     watchUrl: "https://youtu.be/AMVE18zBp0w?si=BL01bmo26qPHuKVf",
   },
   {

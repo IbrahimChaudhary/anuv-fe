@@ -38,42 +38,42 @@ export default function Home() {
   },
   //New 30/dec
   {
-    id: 12,
+    id: 7,
     bgImage: "images/Afsos.jpg",
     watchUrl: "https://youtu.be/2FhgKp_lfJQ?si=riHIx53ATdKfZsiQ",
   },
   {
-    id: 13,
+    id: 8,
     bgImage: "images/Gul_final_artwork.jpg",
     watchUrl: "https://youtu.be/AMVE18zBp0w?si=BL01bmo26qPHuKVf",
   },
   {
-    id: 14,
+    id: 9,
     bgImage: "images/ALAG_AASMAAN_OPEN_FILE.jpg",
     watchUrl: "https://youtu.be/vA86QFrXoho?si=6wpQKc1ORc8rzVq1",
   },
   {
-    id: 15,
+    id: 10,
     bgImage: "images/Mishri_Artwork.jpg",
     watchUrl: "https://youtu.be/0P3Gt-60yLc?si=s9LhNtu3Wu1RNZ4_",
   },
   {
-    id: 16,
+    id: 11,
     bgImage: "images/Maula_artwork.jpg",
     watchUrl: "https://youtu.be/CvV5P-mgaR8?si=tumYPrwdye1mSCEI",
   },
   {
-    id: 17,
+    id: 12,
     bgImage: "images/Riha_Square_with_text.jpg",
     watchUrl: "https://youtu.be/9et5qzuzbQM?si=nnn3l-tg-ZHBND12",
   },
   {
-    id: 18,
+    id: 13,
     bgImage: "images/Ocean_iTunes_version.jpg",
     watchUrl: "https://youtu.be/Y2zc2IeVX_g?si=zrft6JaoSyjS4toc",
   },
   {
-    id: 19,
+    id: 14,
     bgImage: "images/Baarishein_final_artwork.jpg",
     watchUrl: "https://youtu.be/PJWemSzExXs?si=b8bS8aexl4Ymw-95",
   }
@@ -155,7 +155,7 @@ const handleScroll = () => {
   //     $('.nextslide').toggleClass('disab', currentIndex === $slides.length - 1);
   //   }
 
-  //   // ✅ INITIAL STATE (IMPORTANT)
+  //   // INITIAL STATE (IMPORTANT)
   //     setTimeout(() => {
   //       updateSlides();
   //     }, 50);
@@ -483,7 +483,7 @@ $(document).ready(function () {
             <h4>latest <span> release </span></h4>
         
             <div className="letestllestion">
-              <a target="_blank" href="https://linktr.ee/DastakhatWorldTour2026"><img className="rotateanimation" src="images/maxresdefault.png"/></a>
+              <a target="_blank" href="https://umgi.lnk.to/Inaam_AnuvJain"><img className="rotateanimation" src="images/maxresdefault.png"/></a>
             </div>
           </div>
 

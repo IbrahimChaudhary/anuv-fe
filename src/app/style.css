@@ -384,8 +384,27 @@ img.text {
   text-align: center;
 }
 
+.footerinner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .footer-logo svg {
   width: 290px;
+}
+
+.footer-logo h4 {
+  color: #fffaee;
+  font-family: monospace;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+
+.footer-logo h4 span {
+  color: #fff;
+  font-weight: bold;
 }
 
 .newsletter {
@@ -413,6 +432,24 @@ img.text {
   cursor: pointer;
   font-weight: 500;
   font-size: 21px;
+  transition: all 0.3s ease;
+  font-family: monospace;
+}
+
+.newsletter button:hover:not(:disabled) {
+  background: #fffaee;
+  transform: scale(1.05);
+}
+
+.newsletter button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: #827a7a;
+}
+
+.newsletter input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .social-icons {
@@ -464,9 +501,11 @@ ul.dates-list li {
   height: auto;
 
 }
+
 .tiltefou img {
   width: 460px;
 }
+
 .discriptioncontent img {
   width: 440px;
 }
@@ -598,6 +637,7 @@ ul.dates-list li {
   z-index: 99;
   width: 232px;
 }
+
 .shapesret {
   width: 215px;
   position: relative;
@@ -605,6 +645,7 @@ ul.dates-list li {
   top: 158px;
   left: 83px;
 }
+
 .dates-list {
   list-style: none;
   padding: 10px 0;
@@ -787,6 +828,7 @@ ul.dates-list li {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     opacity: 8.95;
@@ -834,11 +876,13 @@ section.mains-music-bg::before {
   left: 0;
   z-index: 0;
 }
+
 img.rotateanimation3.gig-bg.bottoms {
   z-index: -2;
   height: 103vh;
   top: 0;
 }
+
 img.gig-bg {
   position: absolute;
   inset: 0;
@@ -955,3 +999,279 @@ button:hover {
 
 
 /* ================= */
+
+/* Toast Message Animation */
+@keyframes toastSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) rotate(-3deg) scale(0.9);
+    max-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  1% {
+    max-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) rotate(1deg) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-1deg) scale(1);
+  }
+}
+
+@keyframes toastSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(-1deg) scale(1);
+    max-height: 200px;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  99% {
+    opacity: 0;
+    transform: translateY(-20px) rotate(2deg) scale(0.9);
+    max-height: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  100% {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.footer .toast-message {
+  position: relative !important;
+  transition: all 0.3s ease !important;
+  margin-top: 20px !important;
+  padding: 15px 25px !important;
+  background-color: #fffaee !important;
+  border-radius: 30px !important;
+  font-size: 15px !important;
+  text-align: center !important;
+  font-family: monospace !important;
+  font-weight: 500 !important;
+  transform: rotate(-1deg) !important;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3) !important;
+  animation: toastSlideIn 0.5s ease-out forwards !important;
+  max-width: 400px !important;
+  margin: 20px auto 0 !important;
+  overflow: hidden !important;
+}
+
+.footer .toast-message.exiting {
+  animation: toastSlideOut 0.5s ease-out forwards !important;
+}
+
+.footer .toast-message.success {
+  border: 2px solid #fff !important;
+  color: #564d3a !important;
+}
+
+.footer .toast-message.error {
+  border: 2px solid #ff6b6b !important;
+  color: #d63d05 !important;
+}
+
+.footer .toast-message:hover {
+  transform: rotate(0deg) scale(1.02) !important;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Admin Panel Styles */
+
+.admin-layout {
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.admin-header h1 {
+  font-family: 'Anuv_handwriting';
+  font-size: 3rem;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+.admin-header p {
+  font-family: 'IBM Plex Mono';
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 5px 0 0 0;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 20px;
+  font-family: 'IBM Plex Mono';
+}
+
+.admin-logout-btn {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  color: #f5f5f5;
+}
+
+/* Dashboard Content */
+.admin-header-box {
+  margin-bottom: 40px;
+}
+
+.admin-header-box h2 {
+  font-family: 'Anuv_handwriting';
+  font-size: 3.5rem;
+  margin: 0;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.05);
+}
+
+.admin-header-box p {
+  font-family: 'IBM Plex Mono';
+  font-size: 1rem;
+  color: rgba(245, 245, 245, 0.6);
+  margin-top: 10px;
+}
+
+/* Table Styles */
+.admin-table-wrapper {
+  background-color: #1a1a1a;
+  padding: 0 20px 20px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 0px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-family: 'IBM Plex Mono';
+  min-width: 700px;
+}
+
+.admin-table thead {
+  position: relative;
+  z-index: 10;
+}
+
+.admin-table th {
+  position: sticky;
+  top: 0;
+  background-color: #1a1a1a;
+  z-index: 11;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.admin-table-row {
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s;
+}
+
+.admin-table-row:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.admin-table td {
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-id-col {
+  color: #f5f5f5;
+}
+
+.admin-email-col {
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+.admin-date-col {
+  color: rgba(245, 245, 245, 0.6);
+}
+
+/* States */
+.admin-loading-state {
+  padding: 40px;
+  text-align: center;
+}
+
+.admin-error-state {
+  padding: 20px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+}
+
+.admin-error-text {
+  font-family: 'IBM Plex Mono';
+  color: #ff8080;
+}
+
+.admin-empty-state {
+  padding: 60px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .admin-layout {
+    padding: 20px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-right: 80px;
+  }
+
+  .admin-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .admin-header-box h2 {
+    font-size: 2.5rem;
+  }
+}

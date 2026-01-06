@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useAuthStore } from "../../store/useAuthStore";
 
 export default function Header() {
-
+  const { user, isAuthenticated, logout } = useAuthStore();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {

@@ -1,17 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import Footer from "../footer/Footer";
 import $ from "jquery";
-import VideoPlayerThird from "../../Components/VideoPlayerThird";
+import VideoPlayerThird from "@/Components/VideoPlayerThird";
 
 export default function Home() {
    const slides = [
-    {
-      id:1,
-      bgImage:"images/baarishein.jpg",
-      watchUrl:"https://youtu.be/9fKQJcbd-jY?si=XFvhdDY7VVzLK3Xc",
-
-    },
   {
     id: 1,
     bgImage: "images/jotum.jpg",
@@ -42,35 +35,46 @@ export default function Home() {
     bgImage: "images/arzkiyah.jpg",
     watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
   },
-   {
+  //New 30/dec
+  {
     id: 7,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+    bgImage: "images/Afsos.jpg",
+    watchUrl: "https://youtu.be/2FhgKp_lfJQ?si=riHIx53ATdKfZsiQ",
   },
-   {
+  {
     id: 8,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+    bgImage: "images/Gul_final_artwork.jpg",
+    watchUrl: "https://youtu.be/AMVE18zBp0w?si=BL01bmo26qPHuKVf",
   },
-   {
-    id: 9 ,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+  {
+    id: 9,
+    bgImage: "images/ALAG_AASMAAN_OPEN_FILE.jpg",
+    watchUrl: "https://youtu.be/vA86QFrXoho?si=6wpQKc1ORc8rzVq1",
   },
-   {
+  {
     id: 10,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+    bgImage: "images/Mishri_Artwork.jpg",
+    watchUrl: "https://youtu.be/0P3Gt-60yLc?si=s9LhNtu3Wu1RNZ4_",
   },
-   {
+  {
     id: 11,
-    bgImage: "images/arzkiyah.jpg",
-    watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
+    bgImage: "images/Maula_artwork.jpg",
+    watchUrl: "https://youtu.be/CvV5P-mgaR8?si=tumYPrwdye1mSCEI",
   },
   {
     id: 12,
-    bgImage: "images/",
-    watchUrl: "https://youtu.be/2FhgKp_lfJQ?si=riHIx53ATdKfZsiQ",
+    bgImage: "images/Riha_Square_with_text.jpg",
+    watchUrl: "https://youtu.be/9et5qzuzbQM?si=nnn3l-tg-ZHBND12",
+  },
+  {
+    id: 13,
+    bgImage: "images/Ocean_iTunes_version.jpg",
+    watchUrl: "https://youtu.be/Y2zc2IeVX_g?si=zrft6JaoSyjS4toc",
+  },
+  {
+    id: 14,
+    bgImage: "images/Baarishein_final_artwork.jpg",
+    watchUrl: "https://youtu.be/PJWemSzExXs?si=b8bS8aexl4Ymw-95",
   }
 ];
 
@@ -150,7 +154,7 @@ const handleScroll = () => {
   //     $('.nextslide').toggleClass('disab', currentIndex === $slides.length - 1);
   //   }
 
-  //   // ✅ INITIAL STATE (IMPORTANT)
+  //   // INITIAL STATE (IMPORTANT)
   //     setTimeout(() => {
   //       updateSlides();
   //     }, 50);
@@ -478,7 +482,7 @@ $(document).ready(function () {
             <h4>latest <span> release </span></h4>
         
             <div className="letestllestion">
-              <a target="_blank" href="https://linktr.ee/DastakhatWorldTour2026"><img className="rotateanimation" src="images/maxresdefault.png"/></a>
+              <a target="_blank" href="https://umgi.lnk.to/Inaam_AnuvJain"><img className="rotateanimation" src="images/maxresdefault.png"/></a>
             </div>
           </div>
 
@@ -515,7 +519,6 @@ $(document).ready(function () {
                           src={slides[index].bgImage}
                           alt={`Music video ${slides[index].id}`}
                         />
-
                       <a
                       href="#"
                       onClick={(e) => openModal(slides[activeIndex].watchUrl, e)
@@ -635,7 +638,6 @@ $(document).ready(function () {
           </div>
         )}
       </main>
-       <Footer />
     </>
   );
 }

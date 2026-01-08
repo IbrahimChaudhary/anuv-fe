@@ -67,6 +67,15 @@ export async function POST(request: NextRequest) {
     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000/api/v1';
     const url = `${baseUrl}/users`;
 
+    // Extract IP address from request headers
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim()
+      || request.headers.get('x-real-ip')
+      || 'unknown';
+
+    console.log('Extracted IP address:', ip);
+    console.log('x-forwarded-for:', request.headers.get('x-forwarded-for'));
+    console.log('x-real-ip:', request.headers.get('x-real-ip'));
+
     const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
@@ -74,7 +83,7 @@ export async function POST(request: NextRequest) {
     const backendResponse = await fetch(url, {
       method: 'POST',
       headers,
-      body: JSON.stringify({ email }),
+      body: JSON.stringify({ email, ip_address: ip }),
       cache: 'no-store',
     });
 

@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '../../store/useAuthStore';
-import Footer from '../footer/Footer';
 
 export default function LoginPage() {
   const [email, setEmail] = React.useState('');
@@ -31,7 +30,7 @@ export default function LoginPage() {
 
       if (data.success) {
         setUser(data.data);
-        router.push('/admin/dashboard');
+        router.push('/auth/desk');
       } else {
         setError(data.error || data.message || 'Login failed');
       }
@@ -85,7 +84,6 @@ export default function LoginPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

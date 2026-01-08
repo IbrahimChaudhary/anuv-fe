@@ -296,7 +296,7 @@ button.prev img {
 }
 
 .link._1 {
-    right: 388px;
+    right: 155px;
     position: absolute;
     background-image: url('/images/menu-bg1.svg');
 }
@@ -513,26 +513,36 @@ section {
     border-radius: 30px;
     overflow: hidden;
     margin-bottom: 30px;
+    align-items: stretch;
+    position: relative;
+    z-index: 2;
 }
 
 .newsletter input[type="email"] {
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     outline: none;
     background: #1A1A1A;
     color: #fff;
     width: 350px;
+    height: 100%;
+    box-sizing: border-box;
+    cursor: text;
 }
 
 .newsletter button {
     border: none;
     background: #fff;
     color: #1A1A1A;
-    padding: 13px 25px;
+    padding: 12px 25px;
     cursor: pointer;
     font-weight: 500;
     font-size: 21px;
     font-family: '__nextjs-Geist Mono';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .social-icons {
@@ -541,6 +551,8 @@ section {
     justify-content: center;
     gap: 30px;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .social-icons a img {

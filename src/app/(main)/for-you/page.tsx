@@ -1,9 +1,19 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import $ from "jquery";
 
 
 export default function Foryou() {
+
+  const quizAnswers = useRef({
+    question1: null,
+    question2: null,
+    question3: null,
+    question4: null,
+    playlist_id: "playlist-001"
+  });
+
+  const isSubmitting = useRef(false);
 
   useEffect(() => {
     // jQuery logic runs only on client
@@ -12,37 +22,79 @@ export default function Foryou() {
       $(".paper1, .paper2, .paper3, .paper4").hide().css("opacity", "0");
 
       // Step 1 → Button click → show paper1
-      $(".forbutton").on("click", function () {
+      $(".forbutton").off("click").on("click", function () {
         $(".formeyou").fadeOut(300);
         $(".paper1").show().animate({ opacity: 1 }, 600).addClass("show");
       });
 
       // Step 2 → Checkbox in paper1 → show paper2
-      $(".paper1").on("change", "input[type='checkbox']", function () {
-        $(".paper1").animate({ opacity: 1 }, 300);
-        $(".paper2").show().animate({ opacity: 1 }, 300).addClass("show");
+      $(".paper1").off("change").on("change", "input[type='checkbox']", function () {
+        if ($(this).is(":checked")) {
+          const index = $(this).closest(".checkbox-wrap").index() + 1;
+          quizAnswers.current.question1 = index as any;
+          $(".paper1 input[type='checkbox']").not(this).prop("checked", false);
+          
+          $(".paper1").animate({ opacity: 1 }, 300);
+          $(".paper2").show().animate({ opacity: 1 }, 300).addClass("show");
+        }
       });
 
       // Step 3 → Checkbox in paper2 → show paper3
-      $(".paper2").on("change", "input[type='checkbox']", function () {
-        $(".paper2").animate({ opacity: 1 }, 300);
-        $(".paper3").show().animate({ opacity: 1 }, 300).addClass("show");
+      $(".paper2").off("change").on("change", "input[type='checkbox']", function () {
+        if ($(this).is(":checked")) {
+          const index = $(this).closest(".checkbox-wrap").index() + 1;
+          quizAnswers.current.question2 = index as any;
+          $(".paper2 input[type='checkbox']").not(this).prop("checked", false);
+
+          $(".paper2").animate({ opacity: 1 }, 300);
+          $(".paper3").show().animate({ opacity: 1 }, 300).addClass("show");
+        }
       });
 
       // Step 4 → Checkbox in paper3 → show paper4
-      $(".paper3").on("change", "input[type='checkbox']", function () {
-        $(".paper3").animate({ opacity: 1 }, 300);
-        $(".paper4").show().animate({ opacity: 1 }, 300).addClass("show");
+      $(".paper3").off("change").on("change", "input[type='checkbox']", function () {
+        if ($(this).is(":checked")) {
+          const index = $(this).closest(".checkbox-wrap").index() + 1;
+          quizAnswers.current.question3 = index as any;
+          $(".paper3 input[type='checkbox']").not(this).prop("checked", false);
+
+          $(".paper3").animate({ opacity: 1 }, 300);
+          $(".paper4").show().animate({ opacity: 1 }, 300).addClass("show");
+        }
       });
-      // Step 4 → Checkbox in paper3 → show paper4
-      $(".paper4").on("change", "input[type='checkbox']", function () {
-        $(".paper3").animate({ opacity: 1 }, 300);
-        $(".paper4").animate({ opacity: 0 }, 100);
-        $(".paper4").show().animate({ opacity: 0 }, 300, function () {
-          window.location.href = "/playlist";
-        });
+
+      // Step 5 → Checkbox in paper4 → call API and redirect
+      $(".paper4").off("change").on("change", "input[type='checkbox']", async function () {
+        if ($(this).is(":checked") && !isSubmitting.current) {
+          isSubmitting.current = true;
+          const index = $(this).closest(".checkbox-wrap").index() + 1;
+          quizAnswers.current.question4 = index as any;
+          $(".paper4 input[type='checkbox']").not(this).prop("checked", false);
+
+          $(".paper3").animate({ opacity: 1 }, 300);
+          $(".paper4").animate({ opacity: 0 }, 100);
+
+          try {
+            await fetch('/api/quiz', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(quizAnswers.current)
+            });
+          } catch (error) {
+            console.error('Failed to submit quiz data:', error);
+          }
+
+          $(".paper4").show().animate({ opacity: 0 }, 300, function () {
+            window.location.href = "/playlist";
+          });
+        }
       });
     });
+
+    return () => {
+      $(".forbutton, .paper1, .paper2, .paper3, .paper4").off();
+      isSubmitting.current = false;
+    };
   }, []);
   return (
     <>

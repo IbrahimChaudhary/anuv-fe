@@ -47,21 +47,30 @@ export default function Header() {
 
       <div className="navbox home-nav">
         <div className="relative">
-          <Link href="/" className="link _1">Home</Link>
+          <a 
+            href="/" 
+            className="link _1"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/';
+            }}
+          >
+            Home
+          </a>
         </div>
       </div>
 
-      <div className="navbox merch-nav">
+      {/* <div className="navbox merch-nav">
         <div className="relative">
           <Link href="/merch" className="link _2">Merch</Link>
         </div>
-      </div>
+      </div> */}
 
-      <div className="navbox archives-nav">
+      {/* <div className="navbox archives-nav">
         <div className="relative">
           <Link href="/archives" className="link _3">Archives</Link>
         </div>
-      </div>
+      </div> */}
 
       <div className="navbox for-you-nav">
         <div className="relative">

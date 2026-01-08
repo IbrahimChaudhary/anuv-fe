@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useAuthStore } from '../../store/useAuthStore';
 
 import '../style.css';
+import Header from '../header/Header';
 
 export default function AdminLayout({
   children,
@@ -35,6 +36,7 @@ export default function AdminLayout({
 
   return (
     <div className="admin-layout">
+      <Header />
       <header className="admin-header">
         <div>
           <h1>Admin Panel</h1>

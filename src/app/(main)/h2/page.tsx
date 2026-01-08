@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Footer from "../footer/Footer";
 import $ from "jquery";
-import VideoPlayer from "../../Components/VideoPlayerSecond";
+import VideoPlayer from "@/Components/VideoPlayerSecond";
 
 export default function Home() {
    const slides = [
@@ -635,7 +634,6 @@ $(document).ready(function () {
           </div>
         )}
       </main>
-       <Footer />
     </>
   );
 }

@@ -111,7 +111,7 @@ export default function PlaylistPage() {
             <div className="fleging">
               <div className="flexingsitems">
                 <div className="paycard first-custom-class">
-                  <img src={playlist.cover_image || "images/hopethisreaachesyou.jpg"} alt={playlist.title} />
+                  <img src={playlist.cover_image || "/images/hopethisreaachesyou.jpg"} alt={playlist.title} />
                 </div>
               </div>
               <div className="flexcontent">
@@ -131,28 +131,28 @@ export default function PlaylistPage() {
                 <div className="shaeaericon">
                   <ul>
                     <li className="unionclass">
-                      <a href="#"><img className="shearesd" src="amitimg/union.svg" alt="Music platforms" /></a>
+                      <a href="#"><img className="shearesd" src="/amitimg/union.svg" alt="Music platforms" /></a>
                       <div className="unionsocial">
                         <ul>
                           {playlist.platform_links?.spotify ? (
-                            <li><a href={playlist.platform_links.spotify} target="_blank" rel="noopener noreferrer"><img src="amitimg/Spotify.svg" alt="Spotify" /></a></li>
+                            <li><a href={playlist.platform_links.spotify} target="_blank" rel="noopener noreferrer"><img src="/amitimg/Spotify.svg" alt="Spotify" /></a></li>
                           ) : (
-                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="amitimg/Spotify.svg" alt="Spotify" /></a></li>
+                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="/amitimg/Spotify.svg" alt="Spotify" /></a></li>
                           )}
                           {playlist.platform_links?.gaana ? (
-                            <li><a href={playlist.platform_links.gaana} target="_blank" rel="noopener noreferrer"><img src="amitimg/play.svg" alt="Gaana" /></a></li>
+                            <li><a href={playlist.platform_links.gaana} target="_blank" rel="noopener noreferrer"><img src="/amitimg/play.svg" alt="Gaana" /></a></li>
                           ) : (
-                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="amitimg/play.svg" alt="Gaana" /></a></li>
+                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="/amitimg/play.svg" alt="Gaana" /></a></li>
                           )}
                           {playlist.platform_links?.jiosaavn ? (
-                            <li><a href={playlist.platform_links.jiosaavn} target="_blank" rel="noopener noreferrer"><img src="amitimg/musci.svg" alt="JioSaavn" /></a></li>
+                            <li><a href={playlist.platform_links.jiosaavn} target="_blank" rel="noopener noreferrer"><img src="/amitimg/musci.svg" alt="JioSaavn" /></a></li>
                           ) : (
-                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="amitimg/musci.svg" alt="JioSaavn" /></a></li>
+                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="/amitimg/musci.svg" alt="JioSaavn" /></a></li>
                           )}
                           {playlist.platform_links?.amazon ? (
-                            <li><a href={playlist.platform_links.amazon} target="_blank" rel="noopener noreferrer"><img src="amitimg/musci2.svg" alt="Amazon Music" /></a></li>
+                            <li><a href={playlist.platform_links.amazon} target="_blank" rel="noopener noreferrer"><img src="/amitimg/musci2.svg" alt="Amazon Music" /></a></li>
                           ) : (
-                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="amitimg/musci2.svg" alt="Amazon Music" /></a></li>
+                            <li style={{ opacity: 0.3, pointerEvents: 'none' }}><a href="#"><img src="/amitimg/musci2.svg" alt="Amazon Music" /></a></li>
                           )}
                         </ul>
                       </div>

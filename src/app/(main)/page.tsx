@@ -5,75 +5,75 @@ import VideoPlayerThird from "@/Components/VideoPlayerThird";
 
 export default function Home() {
    const slides = [
-  {
+    {
     id: 1,
-    bgImage: "images/jotum.jpg",
+    bgImage: "/images/jotum.jpg",
     watchUrl: "https://youtu.be/ilNt2bikxDI?si=hu8w6urE9rN_3LEX",
   },
   {
     id: 2,
-    bgImage: "images/husn.jpg",
+    bgImage: "/images/husn.jpg",
     watchUrl: "https://youtu.be/gJLVTKhTnog?si=OaiPBRodBbtHTLG7",
   },
   {
     id: 3,
-    bgImage: "images/mjaak.jpg",
+    bgImage: "/images/mjaak.jpg",
     watchUrl: "https://youtu.be/zx0YGEi32r0?si=ExVjQeBoXCaphx-A",
   },
   {
     id: 4,
-    bgImage: "images/antariksh.jpeg",
+    bgImage: "/images/antariksh.jpeg",
     watchUrl: "https://youtu.be/41yIVNzGye8?si=UFrfoOApri8r5JZy",
   },
   {
     id: 5,
-    bgImage: "images/eyes.jpg",
+    bgImage: "/images/eyes.jpg",
     watchUrl: "https://youtu.be/hUORvCLETbI?si=ALH023KlhGRQ7wUO",
   },
    {
     id: 6,
-    bgImage: "images/arzkiyah.jpg",
+    bgImage: "/images/arzkiyah.jpg",
     watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
   },
   //New 30/dec
   {
     id: 7,
-    bgImage: "images/Afsos.jpg",
+    bgImage: "/images/Afsos.jpg",
     watchUrl: "https://youtu.be/2FhgKp_lfJQ?si=riHIx53ATdKfZsiQ",
   },
   {
     id: 8,
-    bgImage: "images/Gul_final_artwork.jpg",
+    bgImage: "/images/Gul_final_artwork.jpg",
     watchUrl: "https://youtu.be/AMVE18zBp0w?si=BL01bmo26qPHuKVf",
   },
   {
     id: 9,
-    bgImage: "images/ALAG_AASMAAN_OPEN_FILE.jpg",
+    bgImage: "/images/ALAG_AASMAAN_OPEN_FILE.jpg",
     watchUrl: "https://youtu.be/vA86QFrXoho?si=6wpQKc1ORc8rzVq1",
   },
   {
     id: 10,
-    bgImage: "images/Mishri_Artwork.jpg",
+    bgImage: "/images/Mishri_Artwork.jpg",
     watchUrl: "https://youtu.be/0P3Gt-60yLc?si=s9LhNtu3Wu1RNZ4_",
   },
   {
     id: 11,
-    bgImage: "images/Maula_artwork.jpg",
+    bgImage: "/images/Maula_artwork.jpg",
     watchUrl: "https://youtu.be/CvV5P-mgaR8?si=tumYPrwdye1mSCEI",
   },
   {
     id: 12,
-    bgImage: "images/Riha_Square_with_text.jpg",
+    bgImage: "/images/Riha_Square_with_text.jpg",
     watchUrl: "https://youtu.be/9et5qzuzbQM?si=nnn3l-tg-ZHBND12",
   },
   {
     id: 13,
-    bgImage: "images/Ocean_iTunes_version.jpg",
+    bgImage: "/images/Ocean_iTunes_version.jpg",
     watchUrl: "https://youtu.be/Y2zc2IeVX_g?si=zrft6JaoSyjS4toc",
   },
   {
     id: 14,
-    bgImage: "images/Baarishein_final_artwork.jpg",
+    bgImage: "/images/Baarishein_final_artwork.jpg",
     watchUrl: "https://youtu.be/PJWemSzExXs?si=b8bS8aexl4Ymw-95",
   }
 ];
@@ -253,11 +253,11 @@ $(document).ready(function () {
             <div className="about-right-imgouter">
             <div className="angal" style={{ backgroundImage: "url('/images/angal.png')" }}> </div>
             <div className="about-right-img">
-              <img src="images/anuv-about-img.jpg" className="rotateanimation" />
+              <img src="/images/anuv-about-img.jpg" className="rotateanimation" />
             </div>
             <div className="rose">
-              <img  className="redstrp" src="images/red-strp.png" />
-              <img src="images/text.png" className="text blackstrp" />
+              <img  className="redstrp" src="/images/red-strp.png" />
+              <img src="/images/text.png" className="text blackstrp" />
             </div>
             </div>
           </div>
@@ -267,26 +267,26 @@ $(document).ready(function () {
           <div className="scribble-line rotateanimation"></div>
             <div className="scribble-line rotateanimation left"></div>
           <div className="innercontainer sliderBlock">
-          <img src="images/gig-bg.png" className="rotateanimation3 gig-bg"></img>
+          <img src="/images/gig-bg.png" className="rotateanimation3 gig-bg"></img>
           <div className="main-flexsf">
             
             <div className="large-note-paper">
               <div className="positionrelative">
                 <div className="bluesimg">
                   <div className="blue-tape">
-                    <img src="./images/gigdates.svg" alt="gig" />
+                    <img src="/images/gigdates.svg" alt="gig" />
                   </div>
 
                   <div className="polaroid-frame">
-                    <img src="./images/gigdatyes.png" alt="Artist singing" className="rotatfret polaroid-image" />
+                    <img src="/images/gigdatyes.png" alt="Artist singing" className="rotatfret polaroid-image" />
                   </div>
                 </div>
                 <div className="paper-clip">
-                    <img src="./images/kundi.svg" alt="gig" />
+                    <img src="/images/kundi.svg" alt="gig" />
                   </div>
                   <div className="sliderlist">
                 <div className="large-note-paper large-note-paper-new slide1 ">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -305,11 +305,11 @@ $(document).ready(function () {
 
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 <div className="large-note-paper large-note-paper-new slide2">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -328,11 +328,11 @@ $(document).ready(function () {
 
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                  <div className="large-note-paper large-note-paper-new slide3">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -348,11 +348,11 @@ $(document).ready(function () {
                     </div>
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 <div className="large-note-paper large-note-paper-new slide4 ">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -368,11 +368,11 @@ $(document).ready(function () {
                     </div>
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 <div className="large-note-paper large-note-paper-new slide5 ">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -388,11 +388,11 @@ $(document).ready(function () {
                     </div>
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 <div className="large-note-paper large-note-paper-new slide6">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -408,11 +408,11 @@ $(document).ready(function () {
                     </div>
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 <div className="large-note-paper large-note-paper-new slide7">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -428,11 +428,11 @@ $(document).ready(function () {
                     </div>
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 <div className="large-note-paper large-note-paper-new slide8 active">
-                  <img className="bgg" src="images/Names2.svg" />
+                  <img className="bgg" src="/images/Names2.svg" />
                   <div className="polaroid-group-row">
                     <div className="polaroid-group">
 
@@ -448,17 +448,17 @@ $(document).ready(function () {
                     </div>
                   </div>
                    <div className="stam circle-wrapper">
-                  <img src="./images/stam.svg " alt="stamp" className="rotating-circle" />
+                  <img src="/images/stam.svg " alt="stamp" className="rotating-circle" />
                 </div>
                 </div>
                 </div>
                 <div className="footer-widgets">
                         <div className="nav-arrows">
                           <span>
-                            <img className="prevslide" src="./images/left-arrwo.svg" />
+                            <img className="prevslide" src="/images/left-arrwo.svg" />
                           </span>
                           <span>
-                            <img className="nextslide" src="./images/right-arrwo.svg" />
+                            <img className="nextslide" src="/images/right-arrwo.svg" />
                           </span>
                         </div>
                       </div>
@@ -472,7 +472,7 @@ $(document).ready(function () {
           </div>
 
           <div className="small-card-content">
-            <img src="images/photostrip.png" alt="Small portrait" className="small-photo rotateanimation2" />
+            <img src="/images/photostrip.png" alt="Small portrait" className="small-photo rotateanimation2" />
           </div>
           <div className="green-tape"></div>
 
@@ -482,7 +482,7 @@ $(document).ready(function () {
             <h4>latest <span> release </span></h4>
         
             <div className="letestllestion">
-              <a target="_blank" href="https://umgi.lnk.to/Inaam_AnuvJain"><img className="rotateanimation" src="images/maxresdefault.png"/></a>
+              <a target="_blank" href="https://umgi.lnk.to/Inaam_AnuvJain"><img className="rotateanimation" src="/images/maxresdefault.png"/></a>
             </div>
           </div>
 
@@ -493,7 +493,7 @@ $(document).ready(function () {
 
         <section className="mains-music-bg">
       <img
-        src="images/video-slider-bg.png"
+        src="/images/video-slider-bg.png"
         className="rotateanimation3 gig-bg bottoms"
         alt=""
       />

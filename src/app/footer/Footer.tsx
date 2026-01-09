@@ -148,19 +148,19 @@ export default function Footer() {
           </svg>
         </a>
         <a href="https://music.amazon.com/artists/B07R21DNQ7/anuv-jain?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=IN&ref=dm_sh_3LTR7v7zBQrlqOmTySimFkaus">
-          <img className="commonCLass" src="amitimg/musci2.svg" />
+          <img className="commonCLass" src="/amitimg/musci2.svg" />
           <svg className="draw-circle" viewBox="0 0 120 120">
             <path d="M60 10 C88 12 108 32 110 60 C112 88 88 110 60 110 C32 108 12 88 10 60 C12 32 32 12 60 10 Z" />
           </svg>
         </a>
          <a href="https://gaana.com/artist/anuv-jain">
-          <img className="commonCLass" src="amitimg/play.svg" />
+          <img className="commonCLass" src="/amitimg/play.svg" />
           <svg className="draw-circle" viewBox="0 0 120 120">
             <path d="M60 10 C88 12 108 32 110 60 C112 88 88 110 60 110 C32 108 12 88 10 60 C12 32 32 12 60 10 Z" />
           </svg>
         </a>
          <a href="https://www.jiosaavn.com/artist/anuv-jain-songs/0K3gBYoafew_">
-          <img className="commonCLass" src="amitimg/musci.svg" />
+          <img className="commonCLass" src="/amitimg/musci.svg" />
           <svg className="draw-circle" viewBox="0 0 120 120">
             <path d="M60 10 C88 12 108 32 110 60 C112 88 88 110 60 110 C32 108 12 88 10 60 C12 32 32 12 60 10 Z" />
           </svg>

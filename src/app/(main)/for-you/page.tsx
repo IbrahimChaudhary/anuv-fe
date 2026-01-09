@@ -127,8 +127,8 @@ export default function Foryou() {
           <div className="paperimg">
 
             <div className="imgpaper">
-              <img src="amitimg/paper1.svg" />
-              <img className="mobile" src="images/paper-mobile-1.png" />
+              <img src="/amitimg/paper1.svg" />
+              <img className="mobile" src="/images/paper-mobile-1.png" />
             </div>
 
             <div className="content-paper">
@@ -171,8 +171,8 @@ export default function Foryou() {
           <div className="paperimg">
 
             <div className="imgpaper">
-              <img src="amitimg/paper2.svg" />
-              <img className="mobile" src="images/paper-mobile-1.png" />
+              <img src="/amitimg/paper2.svg" />
+              <img className="mobile" src="/images/paper-mobile-1.png" />
             </div>
 
             <div className="content-paper">
@@ -215,8 +215,8 @@ export default function Foryou() {
           <div className="paperimg">
 
             <div className="imgpaper">
-              <img src="amitimg/paper3.svg" />
-              <img className="mobile" src="images/paper-mobile-1.png" />
+              <img src="/amitimg/paper3.svg" />
+              <img className="mobile" src="/images/paper-mobile-1.png" />
             </div>
 
             <div className="content-paper">
@@ -259,8 +259,8 @@ export default function Foryou() {
           <div className="paperimg">
 
             <div className="imgpaper">
-              <img src="amitimg/paper4.svg" />
-              <img className="mobile" src="images/paper-mobile-1.png" />
+              <img src="/amitimg/paper4.svg" />
+              <img className="mobile" src="/images/paper-mobile-1.png" />
             </div>
 
             <div className="content-paper">

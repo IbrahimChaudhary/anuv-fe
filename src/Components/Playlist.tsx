@@ -6,6 +6,7 @@ interface Track {
   url: string;
 }
 
+
 interface PlayListProps {
   tracks: Track[];
   selectedTrack: Track;

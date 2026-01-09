@@ -1,9 +1,14 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from "aos";
 
 export default function Footer() {
-   useEffect(() => {
+  const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [isExiting, setIsExiting] = useState(false);
+
+  useEffect(() => {
     AOS.init({
       duration: 800,
       once: false,
@@ -12,17 +17,93 @@ export default function Footer() {
       AOS.refreshHard();
     }, 500);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setMessage(null);
+    setIsLoading(true);
+
+    await new Promise(resolve => setTimeout(resolve, 800));
+
+    try {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setMessage({ type: 'success', text: 'Thank you for signing up! 🎉' });
+        setEmail('');
+        setIsExiting(false);
+
+        setTimeout(() => {
+          setIsExiting(true);
+          setTimeout(() => setMessage(null), 500);
+        }, 5000);
+      } else {
+        let errorMessage = 'Failed to sign up';
+
+        if (data.error) {
+          const errorLower = data.error.toLowerCase();
+          if (errorLower.includes('already') || errorLower.includes('exist') || errorLower.includes('duplicate')) {
+            errorMessage = "You're already signed up! ✓";
+          } else if (errorLower.includes('invalid email')) {
+            errorMessage = 'Please enter a valid email address';
+          } else {
+            errorMessage = data.error;
+          }
+        }
+
+        setMessage({ type: 'error', text: errorMessage });
+        setIsExiting(false);
+
+        setTimeout(() => {
+          setIsExiting(true);
+          setTimeout(() => setMessage(null), 500);
+        }, 5000);
+      }
+    } catch (error) {
+      setMessage({ type: 'error', text: 'Network error. Please try again.' });
+      setIsExiting(false);
+
+      setTimeout(() => {
+        setIsExiting(true);
+        setTimeout(() => setMessage(null), 500);
+      }, 5000);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <footer className="footer" data-aos="fade-up" >
       <div className='footerinner'>
       <div className="footer-logo">
         <h4> for <span>more</span>  <span>updates</span></h4>
         
-      </div>o
-      <form className="newsletter">
-        <button type="submit">Sign up</button>
-        <input type="email"/>
+      </div>
+      <form className="newsletter" onSubmit={handleSubmit}>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? 'Signing up...' : 'Sign up'}
+        </button>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          required
+          disabled={isLoading}
+        />
       </form>
+      {message && (
+        <div className={`toast-message ${message.type} ${isExiting ? 'exiting' : ''}`}>
+          {message.text}
+        </div>
+      )}
       <div className="social-icons">
         <a href="https://www.instagram.com/anuvjain?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
           <svg className='commonCLass' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">

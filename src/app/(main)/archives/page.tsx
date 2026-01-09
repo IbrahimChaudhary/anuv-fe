@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
-import Waveform from "../../Components/Waveform";
+import Waveform from "@/Components/Waveform";
 
 export default function Archives() {
   const tracks = [

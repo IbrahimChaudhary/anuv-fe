@@ -4,8 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import 'aos/dist/aos.css';
 import "./globals.css";
 import "./responsive.css";
-import Header from "./header/Header";
-import Footer from "./footer/Footer";
+// Header and Footer are now managed by (main)/layout.tsx
 import "./font/IBMPlexMono/stylesheet.css";
 import "./font/Anuv_handwriting/stylesheet.css";
 const geistSans = Geist({
@@ -34,7 +33,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Header />
        
       </body>
     </html>

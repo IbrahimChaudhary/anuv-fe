@@ -439,7 +439,7 @@ img.text {
   font-weight: 500;
   font-size: 21px;
   transition: all 0.3s ease;
-  font-family: monospace;
+  font-family: var(--font-geist-mono), monospace;
   display: flex;
   align-items: center;
   justify-content: center;

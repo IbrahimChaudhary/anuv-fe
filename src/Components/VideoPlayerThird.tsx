@@ -29,7 +29,7 @@ const VideoPlayerThird = () => {
           Your browser does not support the video tag.
         </video>
       ) : (
-        <img className="top-img" src="/images/DSCF0273.jpg" alt="Banner" />
+        <img className="top-img" src="/images/DSCF0273.JPG" alt="Banner" />
       )}
     </>
   );

@@ -7,17 +7,17 @@ export default function Home() {
    const slides = [
     {
     id: 1,
-    bgImage: "/images/jotum.jpg",
+    bgImage: "/images/jotum.JPG",
     watchUrl: "https://youtu.be/ilNt2bikxDI?si=hu8w6urE9rN_3LEX",
   },
   {
     id: 2,
-    bgImage: "/images/husn.jpg",
+    bgImage: "/images/husn.JPG",
     watchUrl: "https://youtu.be/gJLVTKhTnog?si=OaiPBRodBbtHTLG7",
   },
   {
     id: 3,
-    bgImage: "/images/mjaak.jpg",
+    bgImage: "/images/mjaak.JPG",
     watchUrl: "https://youtu.be/zx0YGEi32r0?si=ExVjQeBoXCaphx-A",
   },
   {
@@ -27,12 +27,12 @@ export default function Home() {
   },
   {
     id: 5,
-    bgImage: "/images/eyes.jpg",
+    bgImage: "/images/eyes.JPG",
     watchUrl: "https://youtu.be/hUORvCLETbI?si=ALH023KlhGRQ7wUO",
   },
    {
     id: 6,
-    bgImage: "/images/arzkiyah.jpg",
+    bgImage: "/images/arzkiyah.JPG",
     watchUrl: "https://youtu.be/bP8ATWCvqzw?si=4bsekpdctkLCZZJR",
   },
   //New 30/dec
@@ -253,7 +253,7 @@ $(document).ready(function () {
             <div className="about-right-imgouter">
             <div className="angal" style={{ backgroundImage: "url('/images/angal.png')" }}> </div>
             <div className="about-right-img">
-              <img src="/images/anuv-about-img.jpg" className="rotateanimation" />
+              <img src="/images/anuv-about-img.JPG" className="rotateanimation" />
             </div>
             <div className="rose">
               <img  className="redstrp" src="/images/red-strp.png" />
